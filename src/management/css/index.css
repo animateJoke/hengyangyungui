@@ -8,11 +8,11 @@ header h1 {
   color: #fff;
 }
 .content {
+  height: 100%;
   margin-top: -80px;
   box-sizing: border-box;
   padding-top: 80px;
   width: 100%;
-  height: 100%;
 }
 .content .left {
   height: 100%;
@@ -31,15 +31,24 @@ header h1 {
   color: #fff;
 }
 .content .left ul li span {
+  display: block;
+  cursor: pointer;
   padding-left: 30px;
 }
-.content .left ul li i {
+.content .left ul li span i {
+  display: inline-block;
+  transform: rotate(-90deg);
   font-size: 14px;
   margin-left: 15px;
 }
+.content .left ul li div {
+  display: none;
+}
 .content .left ul li div p {
+  cursor: pointer;
   border-top: 1px solid #999;
   padding-left: 30px;
+  font-size: 14px;
 }
 .content .right {
   height: 100%;
