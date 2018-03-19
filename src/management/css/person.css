@@ -1,0 +1,18 @@
+.admin-content {
+  padding-top: 20px;
+}
+.admin-content .am-text-primary {
+  color: #0e90d2;
+  font-size: 18px;
+}
+.admin-content .am-panel-bd {
+  overflow: hidden;
+}
+.admin-content .am-panel-bd .am-img-circle {
+  float: left;
+  width: 100px;
+  height: 100px;
+}
+.admin-content .am-panel-bd .am-u-md-8 {
+  float: right;
+}
