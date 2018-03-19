@@ -1031,12 +1031,22 @@ img.zoom-img:hover {
   margin: 2em 0;
 }
 .services-grid1 h4 {
+	width: 100%;
+	display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   font-size: 1.5em;
   color: #25292e;
   margin: 0em 0 0.5em;
   font-weight:600;
 }
 .services-grid1 p {
+	width: 100%;
+	display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
   font-size: 1em;
   color: #626262;
   line-height: 1.8em;
