@@ -1,0 +1,58 @@
+header {
+  height: 80px;
+  background-color: #0094ff;
+}
+header h1 {
+  padding-left: 50px;
+  line-height: 80px;
+  color: #fff;
+}
+.content {
+  height: 100%;
+  margin-top: -80px;
+  box-sizing: border-box;
+  padding-top: 80px;
+  width: 100%;
+}
+.content .left {
+  height: 100%;
+  width: 200px;
+  float: left;
+}
+.content .left ul {
+  height: 100%;
+  overflow: auto;
+  background-color: #5bc0de;
+}
+.content .left ul li {
+  line-height: 40px;
+  font-size: 18px;
+  border-bottom: 1px solid #eee;
+  color: #fff;
+}
+.content .left ul li span {
+  display: block;
+  cursor: pointer;
+  padding-left: 30px;
+}
+.content .left ul li span i {
+  display: inline-block;
+  transform: rotate(-90deg);
+  font-size: 14px;
+  margin-left: 15px;
+}
+.content .left ul li div {
+  display: none;
+}
+.content .left ul li div p {
+  cursor: pointer;
+  border-top: 1px solid #999;
+  padding-left: 30px;
+  font-size: 14px;
+}
+.content .right {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 200px;
+}
