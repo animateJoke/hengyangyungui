@@ -20,9 +20,6 @@ require(["config"],function(){
                 });
             });
 
-            $(".content .right").load("job.html",function(){
-
-            });
         })
     });
 })
