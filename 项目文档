@@ -3,3 +3,6 @@
         user: 'root',
         password: '',
         database: 'hengyangyungui'
+
+登录/用户信息表  userinfo
+招聘中心信息表   job

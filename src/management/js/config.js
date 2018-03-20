@@ -8,12 +8,16 @@ define("config",[],function(){
             "validate":"lib/jquery-validation-1.14.0/jquery.validate",
             "transform":"lib/jquery-transform",
             "tools":"lib/jquery-tools",
-            "joinUs":"joinUs"
+            "joinUs":"joinUs",
+            "job":"job"
         },
         shim:{
             "validate":["jquery"],
             "transform":["jquery"],
-            "tools":["jquery"]
+            "tools":["jquery"],
+            "joinUs":["jquery"],
+            "job":["jquery","validate"],
+            "job-news":["jquery"],
         }
     })
 });

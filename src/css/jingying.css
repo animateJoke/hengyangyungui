@@ -1,0 +1,105 @@
+*{list-style: none;}
+#lunbobox {
+	width:100%;
+	height:500px;
+	position:relative;
+}
+.lunbo {
+	width:100%;
+	height:500px;
+}
+.lunbo img {
+	width:100%;
+	height:500px;
+	position:absolute;
+	top:0px;
+	left:0px;
+}
+#lunbobox ul {
+	width:285px;
+	position:absolute;
+	bottom:10px;
+	right:0px;
+	z-index:5;
+}
+#lunbobox ul li {
+	cursor:pointer;
+	width:10px;
+	height:4px;
+	border:1px solid #cccccc;
+	float:left;
+	list-style:none;
+	background:#cccccc;
+	text-align:center;
+	margin:0px 5px 0px 0px;
+}
+#toleft {
+	display:none;
+	width:30px;
+	height:100px;
+	font-size:40px;
+	line-height:100px;
+	text-align:center;
+	color:#f4f4f4;
+	/*background:#cccccc;
+	*/
+    /*background:url("../images/toleft.jpg")no-repeat center;
+	*/
+    position:absolute;
+	top:90px;
+	left:12px;
+	cursor:pointer;
+	z-index:99;
+	opacity:0.4;
+}
+#toright {
+	display:none;
+	width:30px;
+	height:100px;
+	font-size:40px;
+	line-height:100px;
+	text-align:center;
+	color:#f4f4f4;
+	/*background:#cccccc;
+	*/
+    position:absolute;
+	top:90px;
+	right:0px;
+	cursor:pointer;
+	z-index:99;
+	opacity:0.4;
+}
+.container h3{
+	margin-top: 20px;
+}
+.project-grd p{
+	padding-top: 10px;
+}
+.two img{
+	width: 538px;
+	height: 184px;
+}
+.two li{
+	line-height: 30px;
+}
+.choose-grid ul{
+	margin-top: 20px;
+	margin-bottom: 50px;
+}
+.choose-grid li{
+	line-height: 30px;
+}
+.choose-grid li a{
+	width: 100%;	
+	display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.table h3{
+	font-size: 1.3em
+}
+.table h3 a{
+	
+	color: black;
+}

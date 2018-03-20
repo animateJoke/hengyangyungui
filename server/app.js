@@ -1,18 +1,14 @@
 const express=require("express");
+const router = express.Router();
+const bodyParser=require("body-parser");
 const app=express();
-const mysql=require("mysql");
-var connection = mysql.createConnection({
-    host: '101.200.60.236',
-    user: 'root',
-    password: '',
-    database: 'hengyangyungui'
-});
-//执行连接
-connection.connect();
-/*connection.query('SELECT * FROM `group`', function(error, results, fields) {
-    if(error) throw error;
-    console.log('The solution is: ', results);
-});*/
+app.use(bodyParser.urlencoded({
+    extended: false
+}))
+
+// parse application/json
+app.use(bodyParser.json());
+app.use("/job",require("./router/job"));
 
 
 app.listen(9090);

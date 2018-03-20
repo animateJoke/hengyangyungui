@@ -4,10 +4,10 @@ var querystring = require("querystring");
 var mysql = require("mysql");
 var app = express();
 var connection = mysql.createConnection({
-	host: "localhost",
+	host: "101.200.60.236",
 	user: "root",
 	password: "",
-	database: "hyyg"
+	database: "hengyangyungui"
 });
 connection.connect();
 app.post("/", (req, res) => {
