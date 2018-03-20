@@ -1,0 +1,15 @@
+.joinUs {
+  padding: 0 30px;
+}
+.joinUs table {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.joinUs table thead tr th {
+  height: 50px;
+}
+.joinUs table tbody tr td {
+  height: 50px;
+}

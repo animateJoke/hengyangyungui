@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+ <!DOCTYPE HTML>
 <html>
 <head>
 <title>Home</title>
@@ -81,9 +81,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							 <li class="dropdown">
 							  <a href="services.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新闻中心<span class="caret"></span></a>
 							  <ul class="dropdown-menu">
-								 <li><a href="services.html">云轨</a></li>
-								<li><a href="services.html">云轨</a></li>
-								<li><a href="services.html">云轨</a></li>
+								 <li><a onclick="group()">集团新闻</a></li>
+								<li><a href="services.html">媒体聚焦</a></li>
+								<li><a href="services.html">通知公告</a></li>
 							  </ul>
 							</li>
 								<li><a href="projects.html">运营服务</a></li>
@@ -451,19 +451,19 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</div>
 						<div class="col-md-4 new-grid">
 							<div class="new-inner">
-								<h4><a href="#">VESTIBULUM IACULIS</a></h4>
+								<h4><a href="#">国家反恐办督导组莅临长沙地铁督导检查工作</a></h4>
 								<h5>10 / 08 / 2015</h5>
-								<p>Cum sociis natoque penatibus et magnis. dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio.</p>
+								<p>2月2日上午，国家反恐办、反恐怖局副巡视员吴鑫等一行3人对长沙市地铁反恐怖工作进行督导检查。</p>
 							</div>
-								<img src="images/n8.jpg" class="img-responsive" alt="">
+								<img src="img/new_02.png" class="img-responsive" alt="">
 						</div>	
 						<div class="col-md-4 new-grid">
 							<div class="new-inner">
-								<h4><a href="#">VESTIBULUM IACULIS</a></h4>
+								<h4><a href="#">廖建华检查长沙地铁安全生产和消防工作 ：始终把人民群众的安全放在首位</a></h4>
 								<h5>10 / 08 / 2015</h5>
-								<p>Cum sociis natoque penatibus et magnis. dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio.</p>
+								<p>12月31日，长沙市人民政府副市长廖建华、副秘书长张跃先在长沙市轨道交通集团有限公司党委书记、</p>
 							</div>
-								<img src="images/n9.jpg" class="img-responsive" alt="">
+								<img src="img/new_03.png" class="img-responsive" alt="">
 						</div>
 						<div class="clearfix"></div>
 					</div>
@@ -477,16 +477,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				<div class="details-grids">
 					<div class="col-md-4 detail-grid">
 						<div class="logo1">
-						<h1><a href="index.html">Construction Co</a></h1>
+						<h1><a href="index.html">衡阳云轨公司</a></h1>
 						</div>
-						<p>Cum sociis natoque penatibus et magnis. dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio.</p>
+						<p><img src="img/weibo.png"></p>
 					</div>
 					<div class="col-md-4 detail-grid">
 						<ul>
-							<li class="dot"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>4978 Diamond Circle Washington, </li>
-							<li class="mobile"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>+212 522 275 386</li>
-							<li class="mes"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:info@example.com">mail@example.com</a></a></li>
-							<li class="sign"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><a href="#">www.example.com</a></li>
+							<li class="dot"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>地址：湖南省衡阳市石鼓区松木经济开发区松枫路三期创业基地35栋</li>
+							<li class="mobile"><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>400-600-800</li>
+							<li class="mes"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> <a href="mailto:info@example.com">yungui@example.com</a></a></li>
+							<li class="sign"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span><a href="#">www.hyyungui.com</a></li>
 						</ul>
 					</div>
 					<div class="col-md-4 detail-grid">
@@ -528,3 +528,42 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 </body>
 </html> 
+<script type="text/javascript">
+	function group(){
+		
+		$.ajax({
+			type:"post",
+			url:"http://localhost:3334"
+			
+		}).then(function(data){
+			console.log(JSON.parse(data));
+			var arr=JSON.parse(data);
+			
+			for (var i=0;i<arr.length;i++) {
+				var obj=arr[i];
+				var services_grid=$('<div class="col-md-3 services-grid"></div>');
+				var services_grid1=$('<div class="col-md-3 services-grid1"></div>');
+				var img=$('<img class="img-responsive"/>').attr("src",obj.img);
+				var title=$("<h4></h4>").html(obj.title);
+				var message=$("<p></p>").html(obj.message);
+				services_grid.append(img);
+				services_grid1.append(title);
+				services_grid1.append(message);
+				if (i%2==0) {
+					
+					$(".services1").append(services_grid);
+					$(".services1").append(services_grid1);
+					
+				}else{
+					$(".services2").append(services_grid);
+					$(".services2").append(services_grid1);
+				}
+				
+				
+				
+			}
+			$(".services1").append('<div class="clearfix"></div>');
+		})
+		window.location.href="services.html"
+	}
+</script>
