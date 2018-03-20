@@ -3,12 +3,13 @@
   overflow: auto;
 }
 .job form {
-  width: 500px;
+  width: 800px;
   margin: 0 auto;
   padding: 30px;
 }
 .job form h2 {
   text-align: center;
+  padding-bottom: 20px;
 }
 .job form p {
   line-height: 50px;
