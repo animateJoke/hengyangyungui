@@ -70,11 +70,13 @@
                         <div>
                             <label for="user-email" class="am-form-group2">电子邮件 </label>
                             <input type="email" id="user-email" placeholder="输入你的电子邮件 / Email">
+                            <p class="s2"></p>
                         </div>
 
                         <div>
                             <label for="user-phone" class="am-form-group3">电 话 </label>
                             <input type="tel" id="user-phone" placeholder="输入你的电话号码 / Telephone">
+                            <p class="s"></p>
                         </div>
 
                         <div>
@@ -122,7 +124,7 @@
             processData: false,
             contentType: false,
         }).then(function (res) {
-            console.log(res);
+
             $(".am-img-thumbnail").attr("src","http://localhost:1111/"+res)
         })
     })
@@ -135,10 +137,45 @@
             processData: false,
             contentType: false,
         }).then(function (res) {
-            console.log(res);
+
             $(".am-img-thumbnail").attr("src","http://localhost:1111/"+res)
         })
     }
+
+    $(function () {
+        $(".s").text("")
+        $(".s2").text("")
+        $(".am-btn").on("click",function () {
+            $.ajax({
+                type: "POST",
+                url: "http://localhost:3333/zheng",
+                data: {
+                    name: $("#user-name").val(),
+                    email: $("#user-email").val(),
+                    tel:$("#user-phone").val(),
+                    QQ:$("#user-QQ").val(),
+                    twitter:$("#user-weibo").val(),
+                    intro:$("#user-intro").val()
+                }
+            })
+
+            var bflag=true ;//
+            var bflag1=true ;//
+            bflag = /^((13[0-9])|(14[5-7])|(15[0-35-9])|(18[0-9]))\d{8}$/.test($("#user-phone").val())
+            if(bflag==false){
+                $(".s").text("手机号不对")
+            }
+            bflag1 =/^\w+@\w+\.\w+$/.test($("#user-email").val())
+            if(bflag1==false){
+                $(".s2").text("邮箱格式不对")
+            }
+
+            if(bflag,bflag1){
+                alert("保存成功")
+            }
+        })
+
+    })
 </script>
 </body>
 </html>
