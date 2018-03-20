@@ -81,16 +81,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							 <li class="dropdown">
 							  <a href="services.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新闻中心<span class="caret"></span></a>
 							  <ul class="dropdown-menu">
-								 <li><a onclick="group()">集团新闻</a></li>
+								<li><a href="services.html">集团新闻</a></li>
 								<li><a href="services.html">媒体聚焦</a></li>
 								<li><a href="services.html">通知公告</a></li>
 							  </ul>
 							</li>
 								<li><a href="projects.html">运营服务</a></li>
 								<li><a href="codes.html">建设动态</a></li>
-								<li><a href="contact.html">经营开发</a></li>
+								<li><a href="jingying.html">经营开发</a></li>
 								<li><a href="contact.html">招标投标</a></li>
-								<li><a href="contact.html">招贤纳才</a></li>
+								<li><a href="zhaopin.html">招贤纳才</a></li>
 							</ul>
 							<form class="navbar-form navbar-right" role="search">
 								<div class="form-group">
@@ -479,7 +479,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<div class="logo1">
 						<h1><a href="index.html">衡阳云轨公司</a></h1>
 						</div>
-						<p><img src="img/weibo.png"></p>
+						<p><img src="img/logo.jpg" style="width: 150px;height: 150px;margin-left: 20px;"></p>
 					</div>
 					<div class="col-md-4 detail-grid">
 						<ul>
@@ -490,12 +490,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						</ul>
 					</div>
 					<div class="col-md-4 detail-grid">
-						<p>Cum sociis natoque penatibus et magnis. dis parturient montes, nascetur ridiculus mus. Nulla dui. Fusce feugiat malesuada odio.</p>
-						<form>
-							<h5>Newsletter<h5>
-							<input type="text" value="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-							<input type="submit" value=" ">
-						</form>
+						<p><img src="img/weibo.png"></p>
 					</div>
 					<div class="clearfix"></div>
 				</div>
@@ -506,7 +501,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		<div class="footer-section">
 						<div class="container">
 							<div class="footer-top">
-								<p>Copyright &copy; 2016.Company name All rights reserved.More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+								<p>Copyright@2001-2017 衡阳轨道交通 All RIGHTS RESERVED湘ICP备14000339号-1<img src="img/small.png"/>湘公网安备 43011102000432号</p>
 									</div>
 							<script type="text/javascript">
 						$(document).ready(function() {
@@ -528,42 +523,3 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 </body>
 </html> 
-<script type="text/javascript">
-	function group(){
-		
-		$.ajax({
-			type:"post",
-			url:"http://localhost:3334"
-			
-		}).then(function(data){
-			console.log(JSON.parse(data));
-			var arr=JSON.parse(data);
-			
-			for (var i=0;i<arr.length;i++) {
-				var obj=arr[i];
-				var services_grid=$('<div class="col-md-3 services-grid"></div>');
-				var services_grid1=$('<div class="col-md-3 services-grid1"></div>');
-				var img=$('<img class="img-responsive"/>').attr("src",obj.img);
-				var title=$("<h4></h4>").html(obj.title);
-				var message=$("<p></p>").html(obj.message);
-				services_grid.append(img);
-				services_grid1.append(title);
-				services_grid1.append(message);
-				if (i%2==0) {
-					
-					$(".services1").append(services_grid);
-					$(".services1").append(services_grid1);
-					
-				}else{
-					$(".services2").append(services_grid);
-					$(".services2").append(services_grid1);
-				}
-				
-				
-				
-			}
-			$(".services1").append('<div class="clearfix"></div>');
-		})
-		window.location.href="services.html"
-	}
-</script>

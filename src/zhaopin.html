@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-<title>Join Us</title>
+<title>Services</title>
 <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all">
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +11,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300' rel='stylesheet' type='text/css'>
 <script src="js/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/jingying.css"/>
+<link rel="stylesheet" type="text/css" href="css/zhaopin.css"/>
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
 <script src="js/responsiveslides.min.js"></script>
 <script>
@@ -108,56 +110,54 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 	</div>
 		<!--end header-section-->
-	<div class="content">
-		 <!-- registration -->
-	<div class="main-1">
-		<div class="container">
-			<div class="register">
-		  	  <form> 
-				 <div class="register-top-grid">
-					<h3>PERSONAL INFORMATION</h3>
-					 <div class="wow fadeInLeft" data-wow-delay="0.4s">
-						<span>First Name<label>*</label></span>
-						<input type="text"> 
-					 </div>
-					 <div class="wow fadeInRight" data-wow-delay="0.4s">
-						<span>Last Name<label>*</label></span>
-						<input type="text"> 
-					 </div>
-					 <div class="wow fadeInRight" data-wow-delay="0.4s">
-						 <span>Email Address<label>*</label></span>
-						 <input type="text"> 
-					 </div>
-					 <div class="clearfix"> </div>
-					   <a class="news-letter" href="#">
-						 <label class="checkbox"><input type="checkbox" name="checkbox" checked=""><i> </i>Sign Up for Newsletter</label>
-					   </a>
-					 </div>
-				     <div class="register-bottom-grid">
-						    <h3>LOGIN INFORMATION</h3>
-							 <div class="wow fadeInLeft" data-wow-delay="0.4s">
-								<span>Password<label>*</label></span>
-								<input type="password">
-							 </div>
-							 <div class="wow fadeInRight" data-wow-delay="0.4s">
-								<span>Confirm Password<label>*</label></span>
-								<input type="password">
-							 </div>
-					 </div>
-				</form>
-				<div class="clearfix"> </div>
-				<div class="register-but">
-				   <form>
-					   <input type="submit" value="submit">
-					   <div class="clearfix"> </div>
-				   </form>
-				</div>
-		   </div>
-		 </div>
-	</div>
-<!-- registration -->
-	</div>
 
+		
+		
+		
+		<!--services-->
+		<div class="content">
+			<div class="container">
+				<div class="tab-menu col-md-3">
+					<h4>招贤纳才</h4>
+		            <ul>
+		            	
+		                <li>招聘咨询</li>
+		                <li>招聘职位</li>
+		                <li>应聘指南</li>
+		            </ul>
+		        </div>
+		        <div class="tab-box col-md-9">
+		            <div>
+		            	<ul>
+		            		<li>集团公司：体检通知</li>
+		            		<li>集团公司：关于入职办理手续通知</li>
+		            		<li>运营公司：体检通知</li>
+		            		<li>集团公司：关于入职办理手续通知</li>
+		            		<li>磁浮公司：体检通知</li>
+		            	</ul>
+		            </div>
+		            <div>
+		            	<ul>
+		            		<li>web前端</li>
+		            		<li>java</li>
+		            		<li>销售经理</li>
+		            		<li>部门经理</li>
+		            		
+		            	</ul>
+		            </div>
+		            <div>
+		            	<ul>
+		            		<li>招聘流程</li>
+		            		<li>应聘需知</li>
+		            		<li>联系电话</li>
+		            		
+		            	</ul>
+		            </div>
+		        </div>
+			</div>
+			<!--features-->
+			
+		</div>
 	<!--detail-->
 		<div class="details-section">
 			<div class="container">
@@ -210,3 +210,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 </body>
 </html> 
+
+<script type="text/javascript">
+	var t;
+var index = 0;
+/////自动播放
+t = setInterval(play, 3000)
+
+function play() {
+    index++;
+    if (index > 4) {
+        index = 0
+    }
+    // console.log(index)
+    $("#lunbobox ul li").eq(index).css({
+        "background": "#999",
+        "border": "1px solid #ffffff"
+    }).siblings().css({
+        "background": "#cccccc",
+        "border": ""
+    })
+
+    $(".lunbo a ").eq(index).fadeIn(1000).siblings().fadeOut(1000);
+};
+</script>
+<script>
+$().ready(function(){
+    $(".tab-menu li").mousedown(function(){
+    //通过 .index()方法获取元素下标，从0开始，赋值给某个变量
+        var _index = $(this).index();
+    //让内容框的第 _index 个显示出来，其他的被隐藏
+        $(".tab-box>div").eq(_index).show().siblings().hide();
+    //改变选中时候的选项框的样式，移除其他几个选项的样式
+    $(this).addClass("change").siblings().removeClass("change");
+    });
+});
+</script>
