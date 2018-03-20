@@ -19,4 +19,16 @@
 }
 .job form p textarea {
   vertical-align: top;
+  margin-top: 20px;
+  width: 357px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  margin-left: 12px;
+}
+.job form p input {
+  width: 357px;
+  height: 37px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  margin-left: 12px;
 }

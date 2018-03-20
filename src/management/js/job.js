@@ -4,7 +4,7 @@ define("job",["jquery","validate"],function($){
             rules: {
                 j_name: {
                     required: true,
-                    minlength: 2
+                    maxlength:5
                 },
                 j_class: {
                     required: true,

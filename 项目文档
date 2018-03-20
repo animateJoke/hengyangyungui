@@ -1,0 +1,5 @@
+#数据库配置
+        host: '101.200.60.236',
+        user: 'root',
+        password: '',
+        database: 'hengyangyungui'
