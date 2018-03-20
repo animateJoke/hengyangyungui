@@ -1,38 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>衡阳云轨公司后台管理系统</title>
-    <link rel="stylesheet" type="text/css" href="css/base.css">
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <link rel="stylesheet" href="css/person.css">
-    <script src="js/lib/require.js/require.js" data-main="js/index"></script>
-</head>
-<body>
-<header>
-    <h1>衡阳云轨公司后台管理系统</h1>
-</header>
-
-<div class="content">
-    <div class="left">
-        <ul class="nav">
-            <li><span>首页</span></li>
-            <li><span>个人中心<i>></i></span>
-                <div>
-                    <p>个人资料</p>
-                    <p>个人资料</p>
-                    <p>个人资料</p>
-                    <p>个人资料</p>
-                </div>
-            </li>
-            <li><span>个人中心<i>></i></span></li>
-            <li><span>个人中心<i>></i></span></li>
-            <li><span>个人中心<i>></i></span></li>
-            <li><span>个人中心<i>></i></span></li>
-            <li><span>个人中心<i>></i></span></li>
-        </ul>
-    </div>
-    <div class="right">
 
         <div class="admin-content" style="overflow: auto ; height: 100% ; padding-left: 20px">
             <div class="admin-content-body">
@@ -53,7 +18,7 @@
                         <form class="am-form" id="uploadForm">
                             <div class="changchuan">
                                 <p>你可以使用<a href="#">gravatar.com</a>提供的头像或者使用本地上传头像。 </p>
-                                <input type="file" id="user-pic" name="logo">
+                                <input type="file" id="user-pic" name="logo" style="margin: 0 auto">
                                 <p class="am-form-help">请选择要上传的文件...</p>
                                 <button type="button" class="am-btn am-btn-primary am-btn-xs" onclick="doUpload()">保 存
                                 </button>
@@ -111,26 +76,24 @@
             </div>
 
         </div>
-    </div>
-</div>
+
 <script src="js/lib/jquery.js"></script>
 <script>
     $(function () {
         $.ajax({
-            url: 'http://localhost:1111/getimg',
+            url: 'http://localhost:9090/person/getimg',
             type: 'POST',
             cache: false, //不必须
             data: new FormData($('#uploadForm')[0]),
             processData: false,
             contentType: false,
         }).then(function (res) {
-
-            $(".am-img-thumbnail").attr("src","http://localhost:1111/"+res)
+            $(".am-img-thumbnail").attr("src","http://localhost:9090/"+res)
         })
     })
     function doUpload() {
         $.ajax({
-            url: 'http://localhost:1111/getimg',
+            url: 'http://localhost:9090/person/getimg',
             type: 'POST',
             cache: false, //不必须
             data: new FormData($('#uploadForm')[0]),
@@ -138,17 +101,15 @@
             contentType: false,
         }).then(function (res) {
 
-            $(".am-img-thumbnail").attr("src","http://localhost:1111/"+res)
+            $(".am-img-thumbnail").attr("src","http://localhost:9090/"+res)
         })
     }
 
     $(function () {
-        $(".s").text("")
-        $(".s2").text("")
         $(".am-btn").on("click",function () {
             $.ajax({
                 type: "POST",
-                url: "http://localhost:3333/zheng",
+                url: "http://localhost:9090/person/gai",
                 data: {
                     name: $("#user-name").val(),
                     email: $("#user-email").val(),
@@ -158,7 +119,8 @@
                     intro:$("#user-intro").val()
                 }
             })
-
+            $(".s").text("")
+            $(".s2").text("")
             var bflag=true ;//
             var bflag1=true ;//
             bflag = /^((13[0-9])|(14[5-7])|(15[0-35-9])|(18[0-9]))\d{8}$/.test($("#user-phone").val())
@@ -175,7 +137,20 @@
             }
         })
 
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:9090/person/zheng",
+            dataType:"json"
+        }).done(function (res) {
+            for (var i = 0; i < res.length; i++) {
+                $("#user-name").val(res[i].name);
+                    $("#user-email").val(res[i].email);
+                    $("#user-phone").val(res[i].tel);
+                    $("#user-QQ").val(res[i].QQ);
+                    $("#user-weibo").val(res[i].twitter);
+                    $("#user-intro").val(res[i].intro)
+
+            }
+        })
     })
 </script>
-</body>
-</html>

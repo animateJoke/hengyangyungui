@@ -5,7 +5,7 @@ app.use(express.static('uploads'));
 const multer = require('multer');
 const querystring = require('querystring');
 const mysql = require('mysql');
-const http = require('http');
+
 var connection = mysql.createConnection({
     host: 'localhost',
     user: 'root',
