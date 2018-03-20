@@ -3,12 +3,13 @@
   overflow: auto;
 }
 .job form {
-  width: 500px;
+  width: 800px;
   margin: 0 auto;
   padding: 30px;
 }
 .job form h2 {
   text-align: center;
+  padding-bottom: 20px;
 }
 .job form p {
   line-height: 50px;
@@ -19,4 +20,16 @@
 }
 .job form p textarea {
   vertical-align: top;
+  margin-top: 20px;
+  width: 357px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  margin-left: 12px;
+}
+.job form p input {
+  width: 357px;
+  height: 37px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  margin-left: 12px;
 }
