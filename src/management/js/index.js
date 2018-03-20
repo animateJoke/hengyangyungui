@@ -6,10 +6,10 @@ require(["config"],function(){
                 $(this).attr("num",parseInt($(this).attr("num"))+1);
                 if($(this).attr("num")%2==1){
                     $(this).find("i").stop().rotate(-90,90);
-                    $(this).siblings("div").stop().slideDown(1000);
+                    $(this).siblings("div").stop().slideDown(500);
                 }else {
                     $(this).find("i").stop().rotate(90,-90);
-                    $(this).siblings("div").stop().slideUp(1000);
+                    $(this).siblings("div").stop().slideUp(500);
                 }
             });
             $(".content .left .nav li div p").on("click",function(){

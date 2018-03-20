@@ -9,6 +9,7 @@
 }
 .joinUs table thead tr th {
   height: 50px;
+  text-align: center;
 }
 .joinUs table tbody tr td {
   height: 50px;

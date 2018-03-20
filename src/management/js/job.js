@@ -49,5 +49,15 @@ require(["config"],function(){
                 }
             })
         });
+        $("#job_btn").on("click",function(){
+            $("#iframe").show();
+            $("#job_btn2").show()
+        })
+        $("#job_btn2").on("click",function(){
+            $("#j_html").val(sessionStorage.getItem("html"));
+            sessionStorage.removeItem("html");
+            $("#iframe").hide();$("#job_btn2").hide();
+
+        })
     })
 })

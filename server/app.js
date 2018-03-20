@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({
 // parse application/json
 app.use(bodyParser.json());
 app.use("/job",require("./router/job"));
-
+app.use("/login",require("./router/login"));
 
 app.listen(9090);
 
