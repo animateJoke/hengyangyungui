@@ -985,13 +985,33 @@ img.zoom-img:hover {
 	margin: 0 .2em;;
 }
 .team-grid h4{
-    font-size: 1.5em;
-    color: #fff;
+	width: 100%;
+	
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.2em;
+    
     font-weight: 600;
   margin: 0.5em 0 0.3em;
   text-transform: capitalize;
 }
+.team-grid h3{
+	font-size: 1.2em;
+	width: 100px;
+	height: 30px;
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	margin-left: 50px;
+	background: #0094FF;
+}
 .team-grid p {
+	width: 100%;
+	
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
      font-size: 1em;
     line-height: 1.8em;
     color: #F1E8E8;
@@ -1010,6 +1030,7 @@ img.zoom-img:hover {
 	margin: 0 .2em;;
 }
 .choose-grid h4{
+	margin-bottom: 20px;
   font-size: 1.5em;
   color: #25292e;
   text-transform: capitalize;
