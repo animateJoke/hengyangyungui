@@ -2,10 +2,10 @@ function createConn(str,json,fn){
     var mysql = require('mysql');
     //创建连接对象
     var connection = mysql.createConnection({
-        host: '101.200.60.236',
+        host: 'localhost',
         user: 'root',
         password: '',
-        database: 'hengyangyungui'
+        database: 'hyyg'
     });
     connection.connect();
     //执行sql语句查询

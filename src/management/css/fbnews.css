@@ -1,0 +1,40 @@
+.fbnews {
+  height: 100%;
+  overflow: auto;
+}
+.fbnews form {
+  width: 100%;
+ 
+  padding: 10px;
+}
+
+.fbnews form p {
+  line-height: 30px;
+  
+}
+.fbnews form p span {
+  font-size: 16px;
+}
+.fbnews form p textarea {
+  vertical-align: top;
+  margin-top: 20px;
+  width: 900px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  margin-left: 12px;
+}
+.fbnews form p input {
+  width: 900px;
+  height: 37px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  margin-left: 12px;
+}
+.fbnews form p select {
+  width: 357px;
+  height: 37px;
+  font-size: 14px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  margin-left: 12px;
+}

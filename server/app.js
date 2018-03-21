@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use("/job",require("./router/job"));
 
-
+app.use("/mng",require("./router/mng"));
 app.listen(9090);
 
 console.log("开启服务器");
