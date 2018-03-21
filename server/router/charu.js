@@ -46,7 +46,7 @@ router.get('/get',function (req, res) {
 
 
 router.post("/gai", function (req, res) {
-    res.append("Content-Type", "text/plain;charset=UTF-8")
+    res.append("Content-Type", "text/plain;charset=UTF-8");
     res.append("Access-Control-Allow-Origin", "*");
    var params= req.body
     mysql('SELECT * FROM informations',{}, function (results) {
@@ -93,7 +93,11 @@ router.post('/delete', function (req, res) {
 
 router.post('/search', function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
+<<<<<<< HEAD
+    var str="select * from informations where name like '%"+req.body.name+"%'";
+=======
     var str="select * from informations where name like '%"+req.body.name+"%'"
+>>>>>>> 3e08e49fc7d53740b1633d9672a210686d02c715
     mysql(str,{},function (result) {
         res.json(result);
     })

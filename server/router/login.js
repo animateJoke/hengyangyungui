@@ -11,6 +11,7 @@ router.post('/', function(req, res, next) {
         res.json(results)
     })
 });
+<<<<<<< HEAD
 
 // router.get('/', function(req, res, next) {
 //     res.append("Access-Control-Allow-Origin","*");
@@ -21,4 +22,14 @@ router.post('/', function(req, res, next) {
 //     })
 // });
 
+=======
+router.get('/', function(req, res, next) {
+    res.append("Access-Control-Allow-Origin","*");
+    // console.log(req.body.u_name);
+    var str = "select * from `userinfo` where u_status=1";
+    mysql(str,{},function( results){
+        res.json(results)
+    })
+});
+>>>>>>> 2570fceddce41ed3964d4cc51aa5ac7c80f85011
 module.exports = router;
