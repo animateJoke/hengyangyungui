@@ -17,7 +17,5 @@ function createConn(str,json,fn){
         connection.end();
     });
 
-
-
 }
 module.exports = createConn;

@@ -6,7 +6,7 @@ require(["config"],function(){
                     title: {
                         required: true
                     },
-                    editor: {
+                    neditor: {
                         required: true
                     },
                     ntype: {
@@ -23,7 +23,7 @@ require(["config"],function(){
                     title: {
                         required: "*标题不能为空"
                     },
-                    editor: {
+                    neditor: {
                         required: "作者可填可不填"
                     },
                     ntype: {

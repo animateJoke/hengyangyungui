@@ -3,7 +3,7 @@ require(["config"],function(){
         $(function(){
             $("#myform").validate({
                 rules: {
-                    j_name: {
+                    j_position: {
                         required: true
                     },
                     j_class: {
@@ -17,10 +17,13 @@ require(["config"],function(){
                     },
                     j_msg: {
                         required: true
+                    },
+                    j_html: {
+                        required: true
                     }
                 },
                 messages: {
-                    j_name: {
+                    j_position: {
                         required: "职位名称不能为空"
                     },
                     j_class: {
@@ -34,6 +37,9 @@ require(["config"],function(){
                     },
                     j_msg: {
                         required: "信息不能为空"
+                    },
+                    j_html: {
+                        required: "请上传页面结构"
                     }
                 },
                 submitHandler:function(form){
@@ -49,5 +55,15 @@ require(["config"],function(){
                 }
             })
         });
+        $("#job_btn").on("click",function(){
+            $("#iframe").show();
+            $("#job_btn2").show()
+        })
+        $("#job_btn2").on("click",function(){
+            $("#j_html").val(sessionStorage.getItem("html"));
+            sessionStorage.removeItem("html");
+            $("#iframe").hide();$("#job_btn2").hide();
+
+        })
     })
 })

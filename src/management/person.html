@@ -18,7 +18,7 @@
                         <form class="am-form" id="uploadForm">
                             <div class="changchuan">
                                 <p>你可以使用<a href="#">gravatar.com</a>提供的头像或者使用本地上传头像。 </p>
-                                <input type="file" id="user-pic" name="logo">
+                                <input type="file" id="user-pic" name="logo" style="margin: 0 auto">
                                 <p class="am-form-help">请选择要上传的文件...</p>
                                 <button type="button" class="am-btn am-btn-primary am-btn-xs" onclick="doUpload()">保 存
                                 </button>
@@ -35,11 +35,13 @@
                         <div>
                             <label for="user-email" class="am-form-group2">电子邮件 </label>
                             <input type="email" id="user-email" placeholder="输入你的电子邮件 / Email">
+                            <p class="s2"></p>
                         </div>
 
                         <div>
                             <label for="user-phone" class="am-form-group3">电 话 </label>
                             <input type="tel" id="user-phone" placeholder="输入你的电话号码 / Telephone">
+                            <p class="s"></p>
                         </div>
 
                         <div>
@@ -73,34 +75,7 @@
 
             </div>
 
-            <script src="js/lib/jquery.js"></script>
-            <script>
-                $(function () {
-                    $.ajax({
-                        url: 'http://localhost:1111/getimg',
-                        type: 'POST',
-                        cache: false, //不必须
-                        data: new FormData($('#uploadForm')[0]),
-                        processData: false,
-                        contentType: false,
-                    }).then(function (res) {
-                        console.log(res);
-                        $(".am-img-thumbnail").attr("src","http://localhost:1111/"+res)
-                    })
-                })
-                function doUpload() {
-                    $.ajax({
-                        url: 'http://localhost:1111/getimg',
-                        type: 'POST',
-                        cache: false, //不必须
-                        data: new FormData($('#uploadForm')[0]),
-                        processData: false,
-                        contentType: false,
-                    }).then(function (res) {
-                        console.log(res);
-                        $(".am-img-thumbnail").attr("src","http://localhost:1111/"+res)
-                    })
-                }
-            </script>
         </div>
+
+<script src="js/person.js"></script>
 

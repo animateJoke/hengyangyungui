@@ -1,0 +1,90 @@
+.r-content {
+  overflow: auto;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 30px;
+}
+.r-content .top p {
+  color: #0e90d2;
+  font-size: 18px;
+}
+.r-content .middle {
+  overflow: hidden;
+  margin-top: 17px;
+}
+.r-content .middle .m-l {
+  float: left;
+}
+.r-content .middle .m-l a {
+  display: inline-block;
+  width: 63px;
+  height: 32px;
+  background: #999;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+}
+.r-content .middle .m-m {
+  float: left;
+  height: 32px;
+  margin-left: 200px;
+}
+.r-content .middle .m-m option {
+  font-size: 12px;
+  line-height: 32px;
+}
+.r-content .middle #myform {
+  float: right;
+  overflow: hidden;
+}
+.r-content .middle #myform input {
+  height: 32px;
+  width: 200px;
+  float: left;
+  border: 1px solid #ccc;
+}
+.r-content .middle #myform button {
+  height: 34px;
+  width: 60px;
+  float: left;
+}
+.r-content .bottom {
+  margin: 40px 0;
+}
+.r-content .bottom table {
+  margin: 40px 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  width: 100%;
+}
+.r-content .bottom table tr {
+  height: 32px;
+  font-size: 14px;
+}
+.r-content .bottom table tr th,
+.r-content .bottom table tr td {
+  border: 0;
+  text-align: center;
+}
+.r-content .bottom table tr td {
+  background: #f1f1f1;
+  border-top: 1px solid #ccc ;
+}
+.r-content .bottom table #tab tr:hover td {
+  background: #afd9ee;
+  border-top: 1px solid #ccc ;
+}
+.r-content .bottom p {
+  margin-top: 30px;
+  text-align: right;
+}
+.r-content .bottom p a {
+  display: inline-block;
+  width: 42px;
+  height: 37px;
+  background: #0094ff;
+  color: #fff;
+  text-align: center;
+  line-height: 37px;
+}
