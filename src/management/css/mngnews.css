@@ -1,0 +1,31 @@
+.manage {
+  padding: 0 30px;
+}
+.manage table {
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+}
+.manage table thead tr th {
+	text-align: center;
+  	height: 30px;
+  	background: url(../../img/images/bg_03.jpg) repeat;
+}
+.manage table tbody tr td {
+  height: 30px;
+}
+.manage table tbody tr td p{
+	width: 300px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding:0 10px ;
+}
+.manage table tbody tr td span{
+	width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	padding:0 10px ;
+}
