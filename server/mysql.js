@@ -18,6 +18,5 @@ function createConn(str,json,fn){
         //执行关闭
         connection.end();
     });
-
 }
 module.exports = createConn;
