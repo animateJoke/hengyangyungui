@@ -83,7 +83,11 @@ router.post('/delete', function (req, res) {
 
 router.post('/search', function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
+<<<<<<< HEAD
     var str="select * from informations where name like '%"+req.body.name+"%'";
+=======
+    var str="select * from informations where name like '%"+req.body.name+"%'"
+>>>>>>> 3e08e49fc7d53740b1633d9672a210686d02c715
     mysql(str,{},function (result) {
         res.json(result);
     })

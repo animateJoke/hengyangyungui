@@ -13,7 +13,7 @@ require(["config"], function () {
                 $(".am-img-thumbnail").attr("src","http://localhost:9090/"+res)
             })
         })
-        function doUpload() {
+        $("#btn").on("click", function(){
             $.ajax({
                 url: 'http://localhost:9090/person/getimg',
                 type: 'POST',
@@ -22,10 +22,9 @@ require(["config"], function () {
                 processData: false,
                 contentType: false,
             }).then(function (res) {
-
                 $(".am-img-thumbnail").attr("src","http://localhost:9090/"+res)
             })
-        }
+        })
 
         $(function () {
             $(".am-btn").on("click",function () {
@@ -75,6 +74,5 @@ require(["config"], function () {
                 }
             })
         })
-
     })
 })

@@ -1,53 +1,62 @@
-<div class="r-content">
-    <div class="top">
-        <p>个人信息表</p>
-    </div>
-    <hr>
-    <div class="middle">
-        <div class="m-l">
-            <a href="#">新增</a>
-            <a href="#">保存</a>
-            <a href="#">审核</a>
-            <a href="#">删除</a>
+
+        <div class="r-content">
+            <div class="top">
+                <p>个人信息表</p>
+            </div>
+            <hr>
+            <div class="middle">
+                <div class="m-l">
+                    <a href="#">新增</a>
+                    <a href="#">保存</a>
+                    <a href="#">审核</a>
+                    <a href="#">删除</a>
+                </div>
+
+                <select name="" class="m-m">
+                    <option value="">胜利女神在微笑</option>
+                    <option value="">刀下生 刀下死</option>
+                    <option value="">提莫队长 正在送命</option>
+                    <option value="">我以为你从来都不会想我呢</option>
+                    <option value="">你有见过我的小熊么</option>
+                    <option value="">黑暗是我的面纱</option>
+                    <option value="">德玛西亚万岁</option>
+                </select>
+                <form action="" id="myform">
+                    <input type="text" id="formTxt">
+                    <button type="button" id="btn">搜索</button>
+                </form>
+            </div>
+
+            <div class="bottom">
+                <table cellpadding="0" cellspacing="0" border="1">
+                    <thead>
+                    <tr>
+                        <th><input type="checkbox"></th>
+                        <th>ID</th>
+                        <th>名字</th>
+                        <th>邮箱</th>
+                        <th>电话</th>
+                        <th>QQ</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody id="tab">
+
+                    </tbody>
+                </table>
+                <p>共 <span class="span"></span>条数据
+                    <a href="#"><<</a>
+                    <a href="#">1</a>
+                    <a href="#">2</a>
+                    <a href="#">3</a>
+                    <a href="#">4</a>
+                    <a href="#">5</a>
+                    <a href="#">>></a>
+                </p>
+            </div>
         </div>
 
-        <select name="" class="m-m">
-            <option value="">胜利女神在微笑</option> <option value="">刀下生 刀下死</option> <option value="">提莫队长 正在送命</option>
-            <option value="">我以为你从来都不会想我呢</option> <option value="">你有见过我的小熊么</option> <option value="">黑暗是我的面纱</option>
-            <option value="">德玛西亚万岁</option>
-        </select>
-        <form action="" id="myform">
-            <input type="text" id="formTxt">
-            <button type="button" id="btn">搜索</button>
-        </form>
-    </div>
-
-    <div class="bottom">
-        <table cellpadding="0" cellspacing="0" border="1">
-            <thead>
-                <tr>
-                    <th><input type="checkbox"></th>
-                    <th>ID</th>
-                    <th>名字</th>
-                    <th>邮箱</th>
-                    <th>电话</th>
-                    <th>QQ</th>
-                    <th>操作</th>
-                </tr>
-            </thead>
-            <tbody id="tab">
-
-            </tbody>
-        </table>
-        <p>共 <span>条数据</span>
-            <a href="#"><<</a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">4</a>
-            <a href="#">5</a>
-            <a href="#">>></a>
-        </p>
-    </div>
-</div>
 <script src="js/table.js"></script>
+
+
+
