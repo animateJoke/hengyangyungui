@@ -65,6 +65,15 @@
 .r-content .bottom table tr th,
 .r-content .bottom table tr td {
   border: 0;
+  text-align: center;
+}
+.r-content .bottom table tr td {
+  background: #f1f1f1;
+  border-top: 1px solid #ccc ;
+}
+.r-content .bottom table #tab tr:hover td {
+  background: #afd9ee;
+  border-top: 1px solid #ccc ;
 }
 .r-content .bottom p {
   margin-top: 30px;

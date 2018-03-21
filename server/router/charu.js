@@ -11,8 +11,6 @@ var connection = mysql.createConnection({
 });
 connection.connect();
 
-
-
 var src = ''
 var storage = multer.diskStorage({
     // 上传文件夹
@@ -28,6 +26,7 @@ var storage = multer.diskStorage({
         cb(null,path)
     }
 })
+
 var upload = multer({
     storage: storage
 });
@@ -75,16 +74,27 @@ router.post("/gai", function (req, res) {
         }
     })
 })
-//实例化第一个express的应用
+
 router.get('/zheng', function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
     res.append("Content-Type", "text/plain;charset=UTF-8")
     connection.query('select * from `informations`', function (erro, result, file) {
-        if (erro) {
-            throw erro
-        }
-        // console.log(result);
         res.json(result)
+    })
+});
+
+router.post('/delete', function (req, res) {
+    res.append("Access-Control-Allow-Origin", "*");
+    console.log(req.body.id);
+    connection.query("update informations set status=0 where id="+req.body.id+"",function (error, result, fields) {
+        console.log(11)
+    })
+});
+
+router.post('/search', function (req, res) {
+    res.append("Access-Control-Allow-Origin", "*");
+    connection.query("select * from informations where name like '%"+req.body.name+"%'",function (error, result, fields) {
+        res.json(result);
     })
 });
 
