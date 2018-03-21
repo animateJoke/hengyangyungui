@@ -36,10 +36,10 @@ router.post('/getimg', upload.single('logo'), function (req, res) {
 
 
 router.post("/gai", function (req, res) {
-    res.append("Content-Type", "text/plain;charset=UTF-8")
+    res.append("Content-Type", "text/plain;charset=UTF-8");
     res.append("Access-Control-Allow-Origin", "*");
    var params= req.body
-    connection.query('SELECT * FROM informations',{}, function (results) {
+    mysql('SELECT * FROM informations',{}, function (results) {
         var flag = false;//没有
         for (var i = 0; i < results.length; i++) {
             console.log(results[i].name)
@@ -83,8 +83,8 @@ router.post('/delete', function (req, res) {
 
 router.post('/search', function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
-    var str="select * from informations where name like '%"+req.body.name+"%'"
-    connection.query(str,{},function (result) {
+    var str="select * from informations where name like '%"+req.body.name+"%'";
+    mysql(str,{},function (result) {
         res.json(result);
     })
 });

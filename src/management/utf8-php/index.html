@@ -17,6 +17,7 @@
     </style>
 </head>
 <body>
+
 <div style="width:1020px;height:500px;overflow:auto;margin:auto">
     <div id="editor" type="text/plain" style="width:1000px;height:330px;overflow:hidden"></div>
     <div style="background-color:#fff;text-align: center;line-height: 80px;">
@@ -34,8 +35,9 @@
     var ue = UE.getEditor('editor');
 
 
+
     function getLocalData () {
-        sessionStorage.setItem("html",UE.getEditor('editor').getContent());
+        sessionStorage.setItem("news",UE.getEditor('editor').getContent());
         alert("保存成功");
         console.log(window);
     }
