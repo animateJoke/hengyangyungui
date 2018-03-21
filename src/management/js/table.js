@@ -13,11 +13,11 @@ require(["config"], function () {
                     var str = "";
                     str += '<tr data-info="' + res[i].id + '" class="list">';
                     str += '<td><input type="checkbox"></td>';
-                    str += ' <td>' + res[i].id + '</td>';
-                    str += ' <td><a href="#">' + res[i].name + '</a></td>';
+                    str += ' <td>' + (i+1) + '</td>';
+                    str += ' <td><a href="#">' + res[i].u_name1 + '</a></td>';
                     str += ' <td>' + res[i].email + '</td>';
                     str += '<td>' + res[i].tel + '</td>';
-                    str += '<td>' + res[i].QQ + '</td>';
+                    str += '<td>' + res[i].u_post + '</td>';
                     str += '<td><a href="#" class="delete">删除</a></td>';
                     str += '</tr>';
                     $("#tab").html($("#tab").html() + str);
@@ -26,7 +26,6 @@ require(["config"], function () {
                     $(this).parents(".list").remove();
                     console.log(this);
                     var str = $(this).parents(".list").attr("data-info");
-                    console.log(str);
                     $.ajax({
                         type: "POST",
                         url: "http://localhost:9090/person/delete",
@@ -63,18 +62,17 @@ require(["config"], function () {
                     var str = '';
                     str += '<tr data-info="' + res[i].id + '" class="list">';
                     str += '<td><input type="checkbox"></td>';
-                    str += ' <td>' + res[i].id + '</td>';
-                    str += ' <td><a href="#">' + res[i].name + '</a></td>';
+                    str += ' <td>' + (i+1 )+ '</td>';
+                    str += ' <td><a href="#">' + res[i].u_name1 + '</a></td>';
                     str += ' <td>' + res[i].email + '</td>';
                     str += '<td>' + res[i].tel + '</td>';
-                    str += '<td>' + res[i].QQ + '</td>';
+                    str += '<td>' + res[i].u_post + '</td>';
                     str += '<td><a href="#" class="delete">删除</a></td>';
                     str += '</tr>';
                     $("#tab").html($("#tab").html()+str);
                 }
                 $(".delete").on("click", function () {
                     $(this).parents(".list").remove();
-                    console.log(this);
                     var str = $(this).parents(".list").attr("data-info");
                     $.ajax({
                         type: "POST",

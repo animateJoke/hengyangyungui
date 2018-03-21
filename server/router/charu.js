@@ -5,6 +5,7 @@ const multer = require('multer');
 const mysql=require("../mysql");
 
 var src = '';
+
 var storage = multer.diskStorage({
     // 上传文件夹
     destination: function (req, file, cb) {
@@ -15,8 +16,10 @@ var storage = multer.diskStorage({
         var path=Date.now() + "-" + file.originalname;
         mysql('INSERT INTO `touxiang` SET ?', {
             path:path ,
+        },function () {
+            cb(null,path)
         })
-        cb(null,path)
+
     }
 })
 
@@ -34,6 +37,13 @@ router.post('/getimg', upload.single('logo'), function (req, res) {
     })
 });
 
+router.get('/get',function (req, res) {
+    res.append("Access-Control-Allow-Origin", "*");
+    mysql('SELECT * FROM touxiang',{}, function (results) {
+        res.send(results);
+    })
+});
+
 
 router.post("/gai", function (req, res) {
     res.append("Content-Type", "text/plain;charset=UTF-8");
@@ -42,7 +52,6 @@ router.post("/gai", function (req, res) {
     mysql('SELECT * FROM informations',{}, function (results) {
         var flag = false;//没有
         for (var i = 0; i < results.length; i++) {
-            console.log(results[i].name)
             if (params.name == results[i].name) {
                 flag = true;//有
             }
@@ -70,7 +79,8 @@ router.post("/gai", function (req, res) {
 
 router.get('/zheng', function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
-    res.append("Content-Type", "text/plain;charset=UTF-8")
+    res.append("Content-Type", "text/plain;charset=UTF-8");
+
     mysql('select * from `informations`',{}, function (result) {
         res.json(result)
     })
