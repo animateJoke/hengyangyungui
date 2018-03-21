@@ -12,7 +12,9 @@ function createConn(str,json,fn){
     connection.query(str,json,function(error, results, fields) {
         if(error) throw error;
         // console.log('The solution is: ', results);
-        fn(results);
+        if(typeof fn=="FUNCTION"){
+            fn(results);
+        }
         //执行关闭
         connection.end();
     });
