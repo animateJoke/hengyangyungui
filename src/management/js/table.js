@@ -6,7 +6,7 @@ require(["config"], function () {
                 url: "http://localhost:9090/person/zheng",
                 dataType: "json"
             }).done(function (res) {
-                console.log(res);
+
                 $("#tab").html("");
                 for (var i = 0; i < res.length; i++) {
                     console.log(res[i]);
@@ -35,6 +35,18 @@ require(["config"], function () {
                         }
                     })
                 })
+                $(".span").html($("#tab input:checked").length)
+                $("table thead tr th input").on("click",function(){
+                    $("#tab input").prop("checked",$(this).prop("checked"))
+                    $(".span").text($("#tab input:checked").length)
+                })
+                $("#tab input").on("click",function () {
+                    $(this).prop("checked", $(this).prop("checked"))
+                    var count = $("#tab input").length;//个数
+                    var cbxCount = $("#tab input:checked").length;//选中的个数
+                    $("table thead tr th input").prop("checked", count == cbxCount);
+                    $(".span").html($("#tab input:checked").length)
+                })
             })
         })
         $("#btn").on("click",function () {
@@ -43,10 +55,9 @@ require(["config"], function () {
                 url: "http://localhost:9090/person/search",
                 data: {
                     name: $("#formTxt").val()
-                },
-                // dataType: "json"
+                }
             }).then(function (res) {
-                // console.log(res);
+
                 $("#tab").html("");
                 for (var i = 0; i < res.length; i++) {
                     var str = '';
@@ -65,7 +76,6 @@ require(["config"], function () {
                     $(this).parents(".list").remove();
                     console.log(this);
                     var str = $(this).parents(".list").attr("data-info");
-                    console.log(str);
                     $.ajax({
                         type: "POST",
                         url: "http://localhost:9090/person/delete",
