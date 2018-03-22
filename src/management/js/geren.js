@@ -10,7 +10,7 @@ require(["config"], function () {
             $("#user-QQ").text(msg[0].u_post);
             $("#user-weibo").text(msg[0].u_pwd);
             $("#user-intro").text(msg[0].u_intro)
-            $(".pic").attr("src","http://localhost:9090/"+msg[0].path)
+            $(".pic").attr("src","http://101.200.60.236:9090/"+msg[0].path)
             
         })
 

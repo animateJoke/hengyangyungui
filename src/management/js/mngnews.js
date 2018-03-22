@@ -2,7 +2,7 @@ require(["config"], function() {
 	require(["jquery"], function($) {
 		$(function() {
 			$.ajax({
-				url: "http://localhost:9090/mng/mng",
+				url: "http://101.200.60.236:9090/mng/mng",
 				type: "get",
 				dataType: "json"
 			}).then(function(res) {
@@ -15,7 +15,7 @@ require(["config"], function() {
 				}
 				$("#tab tr td a").on("click", function() {
 					$.ajax({
-						url: "http://localhost:9090/mng/del",
+						url: "http://101.200.60.236:9090/mng/del",
 						type: "post",
 						dataType: "json",
 						data: {

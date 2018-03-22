@@ -44,7 +44,7 @@ require(["config"],function(){
                 },
                 submitHandler:function(form){
                     $.ajax({
-                        url:"http://localhost:9090/job/job",
+                        url:"http://101.200.60.236:9090/job/job",
                         type:"post",
                         dataType:"json",
                         data:$("#myform").serialize()

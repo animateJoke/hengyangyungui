@@ -23,11 +23,9 @@ router.get('/', function(req, res, next) {
 
 router.post('/register', function(req, res, next) {
     res.append("Access-Control-Allow-Origin","*");
-       console.log(req.body);
     var str = "select * from `userinfo` where u_name=?";
     mysql(str,[req.body.u_name],function( results){
-    	
-			console.log(results.length);
+
 			if(results.length>0){
 				res.send("用户名已存在");
 			}

@@ -3,7 +3,7 @@ require(["config"], function () {
         $(function () {
             $.ajax({
                 type: "GET",
-                url: "http://localhost:9090/person/zheng",
+                url: "http://101.200.60.236:9090/person/zheng",
                 dataType: "json"
             }).done(function (res) {
 
@@ -28,17 +28,17 @@ require(["config"], function () {
                     var str = $(this).parents(".list").attr("data-info");
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:9090/person/delete",
+                        url: "http://101.200.60.236:9090/person/delete",
                         data: {
                             id: str
                         }
                     })
-                })
-                $(".span").html($("#tab input:checked").length)
+                });
+                $(".span").html($("#tab input:checked").length);
                 $("table thead tr th input").on("click",function(){
                     $("#tab input").prop("checked",$(this).prop("checked"))
                     $(".span").text($("#tab input:checked").length)
-                })
+                });
                 $("#tab input").on("click",function () {
                     $(this).prop("checked", $(this).prop("checked"))
                     var count = $("#tab input").length;//个数
@@ -51,7 +51,7 @@ require(["config"], function () {
         $("#btn").on("click",function () {
             $.ajax({
                 type: "post",
-                url: "http://localhost:9090/person/search",
+                url: "http://101.200.60.236:9090/person/search",
                 data: {
                     name: $("#formTxt").val()
                 }
@@ -76,7 +76,7 @@ require(["config"], function () {
                     var str = $(this).parents(".list").attr("data-info");
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:9090/person/delete",
+                        url: "http://101.200.60.236:9090/person/delete",
                         data: {
                             id: str
                         }

@@ -2,20 +2,12 @@ require(["config"], function () {
     require(["jquery"], function ($) {
         var u_id=JSON.parse(sessionStorage.getItem("user"))[0].u_id ;
         $(function () {
-            $.ajax({
-                url: 'http://localhost:9090/person/getimg',
-                type: 'POST',
-                cache: false, //不必须
-                data: new FormData($('#uploadForm')[0]),
-                processData: false,
-                contentType: false,
-            }).then(function (res) {
-                $(".am-img-thumbnail").attr("src", "http://localhost:9090/" + res)
-            })
-        })
+
+                $(".am-img-thumbnail").attr("src", "http://101.200.60.236:9090/" +JSON.parse(sessionStorage.getItem("user"))[0].path)
+        });
         $("#btn1").on("click", function () {
             $.ajax({
-                url: 'http://localhost:9090/person/getimg',
+                url: 'http://101.200.60.236:9090/person/getimg',
                 type: 'POST',
                 cache: false, //不必须
                 data: new FormData($('#uploadForm')[0]),
@@ -23,9 +15,9 @@ require(["config"], function () {
                 contentType: false,
             }).then(function (res) {
                 console.log(res);
-                $(".am-img-thumbnail").attr("src", "http://localhost:9090/" + res)
+                $(".am-img-thumbnail").attr("src", "http://101.200.60.236:9090/" + res)
                 $.ajax({
-                    url: 'http://localhost:9090/person/getpic',
+                    url: 'http://101.200.60.236:9090/person/getpic',
                     type: 'POST',
                     data:{
                         path:res,
@@ -54,7 +46,7 @@ require(["config"], function () {
                 if (bflag, bflag1) {
                     $.ajax({
                         type: "POST",
-                        url: "http://localhost:9090/person/gai",
+                        url: "http://101.200.60.236:9090/person/gai",
                         data: $("#myform").serialize()
                     }).then(function () {
                         alert("保存成功")
