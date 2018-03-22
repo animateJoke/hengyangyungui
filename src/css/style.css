@@ -589,6 +589,7 @@ ul.women_pagenation li a:hover{
 	padding: 4em 0;
 }
 .marketsserved {
+	background: white;
     padding: 5em 0;
 }
 .marketsserved h2 {
@@ -597,6 +598,8 @@ ul.women_pagenation li a:hover{
     text-transform: capitalize;
     margin: 0 .2em;
 	font-family: 'Righteous-Regular';
+
+	background: url(../img/tilbg.png) ;
 }
 .market-grid h4 {
     font-size: 1.5em;
@@ -643,13 +646,14 @@ ul.women_pagenation li a:hover{
 }
 .feature-icon {
     float: left;
-    width: 20%;
+   
     margin-right: 5%;
     border: none;
     text-align: center;
     padding: 2.5em;
     border-radius: 63%;
     background: #B2BDD4;
+    margin-bottom: 10px;
 }
 .feature-text {
     float: left;
@@ -663,6 +667,7 @@ ul.women_pagenation li a:hover{
     font-size: 1.5em;
     color: #25292e;
     font-weight: 600;
+    padding: 10px;
 }
 .feature-grid p {
 	width: 100%;
@@ -680,6 +685,7 @@ ul.women_pagenation li a:hover{
     padding: 0;
 }
 .new-project {
+	background: white;
     padding: 5em 0;
 }
 .newproject-grid h3 {
@@ -751,6 +757,7 @@ ul.women_pagenation li a:hover{
 /*-- //testimonials --*/
 .news {
     padding: 5em 0;
+    background: white;
 }
 .news h3 {
    font-size: 3em;
