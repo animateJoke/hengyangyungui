@@ -81,7 +81,7 @@ router.get('/zheng', function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
     res.append("Content-Type", "text/plain;charset=UTF-8");
 
-    mysql('select * from `informations`',{}, function (result) {
+    mysql('select * from `userinfo`',{}, function (result) {
         res.json(result)
     })
 });
