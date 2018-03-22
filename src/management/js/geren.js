@@ -10,18 +10,8 @@ require(["config"], function () {
             $("#user-QQ").text(msg[0].u_post);
             $("#user-weibo").text(msg[0].u_pwd);
             $("#user-intro").text(msg[0].u_intro)
-
-
-            $.ajax({
-                type: "GET",
-                url: "http://localhost:9090/person/get",
-                dataType:"json"
-            }).done(function (res) {
-                for (var i = 0; i < res.length; i++) {
-                    var src=res[res.length-1].path
-                }
-                $(".pic").attr("src","http://localhost:9090/"+src)
-            })
+            $(".pic").attr("src","http://localhost:9090/"+msg[0].path)
+            
         })
 
 

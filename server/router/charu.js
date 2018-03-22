@@ -13,12 +13,8 @@ var storage = multer.diskStorage({
     },
     // 保存的文件名字
     filename: function (req, file, cb) {
-        var path=Date.now() + "-" + file.originalname;
-        mysql('INSERT INTO `touxiang` SET ?', {
-            path:path ,
-        },function () {
-            cb(null,path)
-        })
+        src=Date.now() + "-" + file.originalname;
+            cb(null,src)
 
     }
 })
@@ -29,21 +25,18 @@ var upload = multer({
 
 router.post('/getimg', upload.single('logo'), function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
-    mysql('SELECT * FROM touxiang',{}, function (results) {
-        for (var i = 0; i < results.length; i++) {
-            src = results[i].path
-        }
         res.send(src);
-    })
 });
 
-router.get('/get',function (req, res) {
+
+
+
+router.post('/getpic',function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
-    mysql('SELECT * FROM touxiang',{}, function (results) {
+    mysql("update userinfo set path=? where u_id=?",[req.body.path,req.body.id], function (results) {
         res.send(results);
     })
 });
-
 
 router.post("/gai", function (req, res) {
     res.append("Content-Type", "text/plain;charset=UTF-8");

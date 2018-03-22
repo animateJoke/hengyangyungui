@@ -1,6 +1,6 @@
 require(["config"], function () {
     require(["jquery"], function ($) {
-
+        var u_id=JSON.parse(sessionStorage.getItem("user"))[0].u_id ;
         $(function () {
             $.ajax({
                 url: 'http://localhost:9090/person/getimg',
@@ -22,7 +22,16 @@ require(["config"], function () {
                 processData: false,
                 contentType: false,
             }).then(function (res) {
+                console.log(res);
                 $(".am-img-thumbnail").attr("src", "http://localhost:9090/" + res)
+                $.ajax({
+                    url: 'http://localhost:9090/person/getpic',
+                    type: 'POST',
+                    data:{
+                        path:res,
+                        id:u_id
+                    }
+                })
             })
         })
 
