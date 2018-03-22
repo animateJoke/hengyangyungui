@@ -11,7 +11,7 @@ require(["config"], function () {
                 for (var i = 0; i < res.length; i++) {
                     console.log(res[i]);
                     var str = "";
-                    str += '<tr data-info="' + res[i].id + '" class="list">';
+                    str += '<tr data-info="' + res[i].u_id + '" class="list">';
                     str += '<td><input type="checkbox"></td>';
                     str += ' <td>' + (i+1) + '</td>';
                     str += ' <td><a href="#">' + res[i].u_name1 + '</a></td>';
@@ -60,7 +60,7 @@ require(["config"], function () {
                 $("#tab").html("");
                 for (var i = 0; i < res.length; i++) {
                     var str = '';
-                    str += '<tr data-info="' + res[i].id + '" class="list">';
+                    str += '<tr data-info="' + res[i].u_id + '" class="list">';
                     str += '<td><input type="checkbox"></td>';
                     str += ' <td>' + (i+1 )+ '</td>';
                     str += ' <td><a href="#">' + res[i].u_name1 + '</a></td>';

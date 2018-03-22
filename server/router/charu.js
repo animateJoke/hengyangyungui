@@ -48,52 +48,35 @@ router.get('/get',function (req, res) {
 router.post("/gai", function (req, res) {
     res.append("Content-Type", "text/plain;charset=UTF-8");
     res.append("Access-Control-Allow-Origin", "*");
-   var params= req.body
-    mysql('SELECT * FROM informations',{}, function (results) {
-        var flag = false;//没有
-        for (var i = 0; i < results.length; i++) {
-            if (params.name == results[i].u_name1) {
-                flag = true;//有
-            }r
-        }
-        if (flag) {
-            //改
-            mysql(`UPDATE informations
-                 SET u_name='${params.name}',email='${params.email}',tel='${params.tel}',u_post='${params.QQ}',twitter='${params.twitter}',intro='${params.intro}',status='1'
-                  where name='${params.name}'`, [], function (res) {
-            })
-        } else {
-            //加
-            mysql('INSERT INTO `informations` SET ?', {
-                u_name1: params.name,
-                email: params.email,
-                tel: params.tel,
-                u_post: params.QQ,
-                twitter: params.twitter,
-                intro: params.intro,
-                status: 1
-            });
-        }
-    })
+   var params= req.body;
+   var id=params.u_id;
+    delete(params.u_id);
+   mysql("update userinfo set ? where u_id="+id,params,function (result) {
+       res.send()
+   })
+
 })
 
 router.get('/zheng', function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
     res.append("Content-Type", "text/plain;charset=UTF-8");
 
-    mysql('select * from `userinfo`',{}, function (result) {
+
+    mysql('select * from `userinfo` where u_status=1',{}, function (result) {
+
         res.json(result)
     })
 });
 
 router.post('/delete', function (req, res) {
+    console.log(req.body);
     res.append("Access-Control-Allow-Origin", "*");
-    mysql("update informations set status=0 where id=?",[req.body.id])
+    mysql("update userinfo set u_status=0 where u_id=?",[req.body.id])
 });
 
 router.post('/search', function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
-    var str="select * from informations where name like '%"+req.body.name+"%'";
+    var str="select * from userinfo where name like '%"+req.body.name+"%'";
     mysql(str,{},function (result) {
         res.json(result);
     })
