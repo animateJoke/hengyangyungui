@@ -24,5 +24,5 @@ router.post("/del",function(req, res){
     mysql(str,[req.body.id],function(results){
         res.json(results)
     })
-})
+});
 module.exports = router;

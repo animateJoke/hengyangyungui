@@ -11,10 +11,23 @@
   border-collapse: collapse;
   margin-top: 15px;
 }
+.joinUs table thead tr {
+  background-color: #fff;
+}
 .joinUs table thead tr th {
   height: 50px;
   text-align: center;
 }
+.joinUs table tbody {
+  position: relative;
+}
 .joinUs table tbody tr td {
   height: 50px;
+}
+.joinUs .pagination {
+  text-align: center;
+  display: block;
+}
+.joinUs .pagination li {
+  display: inline-block;
 }
