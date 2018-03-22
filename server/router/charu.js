@@ -52,23 +52,23 @@ router.post("/gai", function (req, res) {
     mysql('SELECT * FROM informations',{}, function (results) {
         var flag = false;//没有
         for (var i = 0; i < results.length; i++) {
-            if (params.name == results[i].name) {
+            if (params.name == results[i].u_name1) {
                 flag = true;//有
-            }
+            }r
         }
         if (flag) {
             //改
             mysql(`UPDATE informations
-                 SET name='${params.name}',email='${params.email}',tel='${params.tel}',QQ='${params.QQ}',twitter='${params.twitter}',intro='${params.intro}',status='1'
+                 SET u_name='${params.name}',email='${params.email}',tel='${params.tel}',u_post='${params.QQ}',twitter='${params.twitter}',intro='${params.intro}',status='1'
                   where name='${params.name}'`, [], function (res) {
             })
         } else {
             //加
             mysql('INSERT INTO `informations` SET ?', {
-                name: params.name,
+                u_name1: params.name,
                 email: params.email,
                 tel: params.tel,
-                QQ: params.QQ,
+                u_post: params.QQ,
                 twitter: params.twitter,
                 intro: params.intro,
                 status: 1
@@ -93,11 +93,7 @@ router.post('/delete', function (req, res) {
 
 router.post('/search', function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
-<<<<<<< HEAD
     var str="select * from informations where name like '%"+req.body.name+"%'";
-=======
-    var str="select * from informations where name like '%"+req.body.name+"%'"
->>>>>>> 3e08e49fc7d53740b1633d9672a210686d02c715
     mysql(str,{},function (result) {
         res.json(result);
     })
