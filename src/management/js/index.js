@@ -1,6 +1,19 @@
 require(["config"],function(){
     require(["jquery","transform"],function($,a){
         $(function(){
+            var user=JSON.parse(sessionStorage.getItem("user")||"[]");
+            if(user[0].u_rank<3){
+                $("#register").append($("<p data-info='register'>新增成员</p>"))
+            }
+            if(user.length==1){
+                $("#user p").text(user[0].u_name1);
+            }
+            $("#user button").on("click",function(){
+                if(confirm("确定退出")){
+                    sessionStorage.removeItem("user");
+                    window.location.href="login.html";
+                }
+            });
             $(".content .left .nav li span").attr("num",0);
             $(".content .left .nav li span").on("click",function(){
                 $(this).attr("num",parseInt($(this).attr("num"))+1);

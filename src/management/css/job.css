@@ -29,7 +29,14 @@
   z-index: 999;
   display: none;
 }
-.job form p iframe {
+.job form p input {
+  width: 357px;
+  height: 37px;
+  padding-left: 20px;
+  border: 1px solid #ccc;
+  margin-left: 12px;
+}
+.job iframe {
   position: fixed;
   left: 0;
   top: 0;
@@ -40,15 +47,8 @@
   background: rgba(0, 0, 0, 0.2);
   display: none;
 }
-.job form p iframe .btns {
+.job iframe .btns {
   background-color: #fff;
-}
-.job form p input {
-  width: 357px;
-  height: 37px;
-  padding-left: 20px;
-  border: 1px solid #ccc;
-  margin-left: 12px;
 }
 .job .error {
   padding-left: 20px;

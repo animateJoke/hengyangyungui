@@ -5,6 +5,7 @@ const multer = require('multer');
 const mysql=require("../mysql");
 
 var src = '';
+
 var storage = multer.diskStorage({
     // 上传文件夹
     destination: function (req, file, cb) {
@@ -15,8 +16,10 @@ var storage = multer.diskStorage({
         var path=Date.now() + "-" + file.originalname;
         mysql('INSERT INTO `touxiang` SET ?', {
             path:path ,
+        },function () {
+            cb(null,path)
         })
-        cb(null,path)
+
     }
 })
 
@@ -34,32 +37,38 @@ router.post('/getimg', upload.single('logo'), function (req, res) {
     })
 });
 
+router.get('/get',function (req, res) {
+    res.append("Access-Control-Allow-Origin", "*");
+    mysql('SELECT * FROM touxiang',{}, function (results) {
+        res.send(results);
+    })
+});
+
 
 router.post("/gai", function (req, res) {
-    res.append("Content-Type", "text/plain;charset=UTF-8")
+    res.append("Content-Type", "text/plain;charset=UTF-8");
     res.append("Access-Control-Allow-Origin", "*");
    var params= req.body
-    connection.query('SELECT * FROM informations',{}, function (results) {
+    mysql('SELECT * FROM informations',{}, function (results) {
         var flag = false;//没有
         for (var i = 0; i < results.length; i++) {
-            console.log(results[i].name)
-            if (params.name == results[i].name) {
+            if (params.name == results[i].u_name1) {
                 flag = true;//有
-            }
+            }r
         }
         if (flag) {
             //改
             mysql(`UPDATE informations
-                 SET name='${params.name}',email='${params.email}',tel='${params.tel}',QQ='${params.QQ}',twitter='${params.twitter}',intro='${params.intro}',status='1'
+                 SET u_name='${params.name}',email='${params.email}',tel='${params.tel}',u_post='${params.QQ}',twitter='${params.twitter}',intro='${params.intro}',status='1'
                   where name='${params.name}'`, [], function (res) {
             })
         } else {
             //加
             mysql('INSERT INTO `informations` SET ?', {
-                name: params.name,
+                u_name1: params.name,
                 email: params.email,
                 tel: params.tel,
-                QQ: params.QQ,
+                u_post: params.QQ,
                 twitter: params.twitter,
                 intro: params.intro,
                 status: 1
@@ -70,8 +79,9 @@ router.post("/gai", function (req, res) {
 
 router.get('/zheng', function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
-    res.append("Content-Type", "text/plain;charset=UTF-8")
-    mysql('select * from `informations`',{}, function (result) {
+    res.append("Content-Type", "text/plain;charset=UTF-8");
+
+    mysql('select * from `userinfo`',{}, function (result) {
         res.json(result)
     })
 });
@@ -83,8 +93,8 @@ router.post('/delete', function (req, res) {
 
 router.post('/search', function (req, res) {
     res.append("Access-Control-Allow-Origin", "*");
-    var str="select * from informations where name like '%"+req.body.name+"%'"
-    connection.query(str,{},function (result) {
+    var str="select * from informations where name like '%"+req.body.name+"%'";
+    mysql(str,{},function (result) {
         res.json(result);
     })
 });

@@ -12,12 +12,11 @@ function createConn(str,json,fn){
     connection.query(str,json,function(error, results, fields) {
         if(error) throw error;
         // console.log('The solution is: ', results);
-        if(typeof fn=="function"){
+        if(typeof(fn)=="function"){
             fn(results);
         }
         //执行关闭
         connection.end();
     });
-
 }
 module.exports = createConn;

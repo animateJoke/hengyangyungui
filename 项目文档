@@ -5,4 +5,9 @@
         database: 'hengyangyungui'
 
 登录/用户信息表  userinfo
+u_name1  员工姓名
+
+u_post   员工职位  组长 2     组员 3
+
 招聘中心信息表   job
+
