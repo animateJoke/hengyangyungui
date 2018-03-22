@@ -20,12 +20,12 @@ app.post("/", (req, res) => {
 	})
 	req.on("end", () => {
 		
-		connection.query( "SELECT*FROM `group`", function(error, results, fields) {
+		connection.query( "SELECT * FROM `mng` where ntype=''", function(error, results, fields) {
 			console.log(results)
 			res.send(results);
 		})
 	})	//	
 })
-app.listen(3334);
+app.listen(3336);
 console.log("服务开启");
 

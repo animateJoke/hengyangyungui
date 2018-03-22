@@ -21,7 +21,7 @@
 <div style="width:1020px;height:500px;overflow:auto;margin:auto">
     <div id="editor" type="text/plain" style="width:1000px;height:330px;overflow:hidden"></div>
     <div style="background-color:#fff;text-align: center;line-height: 80px;">
-        <button onclick="getLocalData()" >保存</button>
+         <button onclick="getLocalData()">获得整个html的内容</button>
         <button onclick="clearLocalData()" >清空草稿箱</button>
     </div>
 </div>
@@ -36,10 +36,9 @@
 
 
 
-    function getLocalData () {
-        sessionStorage.setItem("news",UE.getEditor('editor').getContent());
-        alert("保存成功");
-        console.log(window);
+     function getLocalData () {
+        alert(UE.getEditor('editor').execCommand( "getlocaldata" ));
+        sessionStorage.setItem("news",UE.getEditor('editor').execCommand( "getlocaldata" ))
     }
 
     function clearLocalData () {

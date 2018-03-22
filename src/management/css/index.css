@@ -67,6 +67,8 @@ header #user button {
   font-size: 14px;
 }
 .content .right {
+  background: url("http://localhost:9090/true.jpg") no-repeat 200px 0;
+  background-size: cover;
   height: 100%;
   width: 100%;
   box-sizing: border-box;
