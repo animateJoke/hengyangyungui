@@ -78,7 +78,7 @@ a.button1:hover {
     padding-left: 0px;
 }
 .navbar-default {
-    border-color: none !important;
+    border-color:none !important;
     background:none !important;
 }
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {

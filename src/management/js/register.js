@@ -3,7 +3,7 @@ require(["config"], function() {
 		$("#register").on("click", function() {
 			$.ajax({
 				type: "POST",
-				url: "http://localhost:9090/login/register",
+				url: "http://101.200.60.236:9090/login/register",
 				data: {
 					u_name: $("#username").val(),
 					u_pwd: $("#password").val(),

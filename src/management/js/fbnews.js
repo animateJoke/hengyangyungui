@@ -33,7 +33,7 @@ require(["config"],function(){
             sessionStorage.removeItem("news");
             
                     $.ajax({
-                        url:"http://localhost:9090/mng/mng",
+                        url:"http://101.200.60.236:9090/mng/mng",
                         type:"post",
                         dataType:"json",
                         data:$("#myform").serialize()

@@ -1,29 +1,19 @@
 require(["config"], function () {
     require(["jquery"], function ($) {
 
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:9090/person/zheng",
-            dataType:"json"
-        }).done(function (res) {
-            for (var i = 0; i < res.length; i++) {
-                $("#user-name").text(res[i].u_name1);
-                $("#user-email").text(res[i].email);
-                $("#user-phone").text(res[i].tel);
-                $("#user-QQ").text(res[i].u_post);
-                $("#user-weibo").text(res[i].twitter);
-                $("#user-intro").text(res[i].intro)
-            }
+        $(function () {
+            var msg = JSON.parse(sessionStorage.getItem("user"));
+            console.log(msg);
+            $("#user-name").text(msg[0].u_name1);
+            $("#user-email").text(msg[0].u_email);
+            $("#user-phone").text(msg[0].u_tel);
+            $("#user-QQ").text(msg[0].u_post);
+            $("#user-weibo").text(msg[0].u_pwd);
+            $("#user-intro").text(msg[0].u_intro)
+            $(".pic").attr("src","http://101.200.60.236:9090/"+msg[0].path)
+            
         })
-        $.ajax({
-            type: "GET",
-            url: "http://localhost:9090/person/get",
-            dataType:"json"
-        }).done(function (res) {
-            for (var i = 0; i < res.length; i++) {
-               var src=res[res.length-1].path
-            }
-            $(".pic").attr("src","http://localhost:9090/"+src)
-        })
+
+
     })
 })
