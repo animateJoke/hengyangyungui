@@ -15,8 +15,8 @@ require(["config"], function () {
                     str += '<td><input type="checkbox"></td>';
                     str += ' <td>' + (i+1) + '</td>';
                     str += ' <td><a href="#">' + res[i].u_name1 + '</a></td>';
-                    str += ' <td>' + res[i].email + '</td>';
-                    str += '<td>' + res[i].tel + '</td>';
+                    str += ' <td>' + res[i].u_email + '</td>';
+                    str += '<td>' + res[i].u_tel + '</td>';
                     str += '<td>' + res[i].u_post + '</td>';
                     str += '<td><a href="#" class="delete">删除</a></td>';
                     str += '</tr>';

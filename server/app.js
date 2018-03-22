@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/files'));
 app.use(express.static('uploads'));
 
-
 app.use("/job",require("./router/job"));
 app.use("/login",require("./router/login"));
 app.use("/person",require("./router/charu"));

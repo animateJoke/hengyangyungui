@@ -8,7 +8,6 @@ function createConn(str,json,fn){
         database: 'hengyangyungui'
     });
     connection.connect();
-
     //执行sql语句查询
     connection.query(str,json,function(error, results, fields) {
         if(error) throw error;

@@ -13,8 +13,8 @@ router.post('/job', function(req, res, next) {
 });
 router.get('/job', function(req, res, next) {
     res.append("Access-Control-Allow-Origin","*");
-    var str = "select * from `job` where j_status=1";
-    mysql(str,{},function(results){
+    var str = "select * from `job` where j_status=1 LIMIT ?,7";
+    mysql(str,[req.query.index*7],function(results){
         res.json(results)
     })
 });
@@ -23,6 +23,13 @@ router.post("/del",function(req, res){
     var str = "update job set j_status=0 where j_id=?";
     mysql(str,[req.body.id],function(results){
         res.json(results)
+    })
+});
+router.get("/count",function(req, res){
+    res.append("Access-Control-Allow-Origin","*");
+    var str = "select count(*) from `job` where j_status=1";
+    mysql(str,[],function(results){
+        res.json(results[0])
     })
 });
 module.exports = router;
