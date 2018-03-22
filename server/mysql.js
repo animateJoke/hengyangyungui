@@ -2,17 +2,17 @@ function createConn(str,json,fn){
     var mysql = require('mysql');
     //创建连接对象
     var connection = mysql.createConnection({
-        host: 'localhost',
+        host: '101.200.60.236',
         user: 'root',
         password: '',
-        database: 'hyyg'
+        database: 'hengyangyungui'
     });
     connection.connect();
     //执行sql语句查询
     connection.query(str,json,function(error, results, fields) {
         if(error) throw error;
         // console.log('The solution is: ', results);
-        if(typeof fn=="FUNCTION"){
+        if(typeof fn=="function"){
             fn(results);
         }
         //执行关闭

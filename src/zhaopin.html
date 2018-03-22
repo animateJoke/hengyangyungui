@@ -58,8 +58,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h1><a href="index.html">衡阳云轨公司</a></h1>
 				</div>
 				<div class="buttons">
-				   	<a href="joinus.html" class="button">注册</a>
-		            <a href="login.html" class="button1">登录</a>
+				   	
+		            <a href="management/login.html" class="button1">登录</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -78,7 +78,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						  <ul class="nav navbar-nav cl-effect-16">
-							<li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
+							<li><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
 							<li><a href="about.html">企业管理</a></li>
 							 <li class="dropdown">
 							  <a href="services.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新闻中心<span class="caret"></span></a>
@@ -92,7 +92,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href="codes.html">建设动态</a></li>
 								<li><a href="jingying.html">经营开发</a></li>
 								<li><a href="contact.html">招标投标</a></li>
-								<li><a href="zhaopin.html">招贤纳才</a></li>
+								<li class="active"><a href="zhaopin.html">招贤纳才</a></li>
 							</ul>
 							<form class="navbar-form navbar-right" role="search">
 								<div class="form-group">
@@ -128,28 +128,23 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		        </div>
 		        <div class="tab-box col-md-9">
 		            <div>
-		            	<ul>
-		            		<li>集团公司：体检通知</li>
+		            	<ul class="tijian">
+		            		<!--<li>集团公司：体检通知</li>
 		            		<li>集团公司：关于入职办理手续通知</li>
 		            		<li>运营公司：体检通知</li>
 		            		<li>集团公司：关于入职办理手续通知</li>
-		            		<li>磁浮公司：体检通知</li>
+		            		<li>磁浮公司：体检通知</li>-->
 		            	</ul>
 		            </div>
 		            <div>
-		            	<ul>
-		            		<li>web前端</li>
-		            		<li>java</li>
-		            		<li>销售经理</li>
-		            		<li>部门经理</li>
+		            	<ul class="zhaopin">
+		            		
 		            		
 		            	</ul>
 		            </div>
 		            <div>
-		            	<ul>
-		            		<li>招聘流程</li>
-		            		<li>应聘需知</li>
-		            		<li>联系电话</li>
+		            	<ul class="lianxi">
+		            		
 		            		
 		            	</ul>
 		            </div>
@@ -210,7 +205,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 </body>
 </html> 
+<script type="text/javascript">
+	
+	$(function(){
+		
+	
+		
+		$.ajax({
+			type:"get",
+			url:"http://localhost:9090/mng/mng",
+			dataType: "json"
+		}).then(function(data){
+			console.log(data);
+			var arr=data;
+			for (var i=0;i<arr.length;i++) {
+				var li=$('<li data-info="' + arr[i].id + '"></li>');
+				
+				li.text(arr[i].title);
+				
+				
+				if(arr[i].ntype=="体检通知"){
+					$(".tijian").append(li);
+				}else if(arr[i].ntype=="招聘需知"){
+					$(".zhaopin").append(li);
+				}else if(arr[i].ntype=="联系电话"){
+					$(".lianxi").append(li);
+				}
+				
+			}
+			$(".tijian li").on("mousedown", function() {
+				window.location.href="xiangq.html?id="+$(this).data("info");
 
+					
+				})
+//			$(".notice li").on("mousedown", function() {
+//				window.location.href="xiangq.html?id="+$(this).data("info");
+//
+//					
+//				})
+			$(".lianxi li").on("mousedown", function() {
+				window.location.href="xiangq.html?id="+$(this).data("info");
+
+					
+				})
+		})
+	})
+</script>
 <script type="text/javascript">
 	var t;
 var index = 0;
@@ -238,6 +278,7 @@ function play() {
 $().ready(function(){
     $(".tab-menu li").mousedown(function(){
     //通过 .index()方法获取元素下标，从0开始，赋值给某个变量
+    
         var _index = $(this).index();
     //让内容框的第 _index 个显示出来，其他的被隐藏
         $(".tab-box>div").eq(_index).show().siblings().hide();

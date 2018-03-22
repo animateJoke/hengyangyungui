@@ -6,15 +6,11 @@ require(["config"],function(){
                     title: {
                         required: true
                     },
-                    neditor: {
-                        required: true
-                    },
+                    
                     ntype: {
                         required: true
                     },
-                    time: {
-                        required: true
-                    },
+                    
                     message: {
                         required: true
                     }
@@ -23,20 +19,19 @@ require(["config"],function(){
                     title: {
                         required: "*标题不能为空"
                     },
-                    neditor: {
-                        required: "作者可填可不填"
-                    },
+                    
                     ntype: {
                         required: "*类别不能为空"
                     },
-                    time: {
-                        required: "日期可填可不填"
-                    },
+                   
                     message: {
-                        required: "*内容不能为空"
+                        required: "*描述不能为空"
                     }
                 },
                 submitHandler:function(form){
+            $("#news_h").val(sessionStorage.getItem("news"));
+            sessionStorage.removeItem("news");
+            
                     $.ajax({
                         url:"http://localhost:9090/mng/mng",
                         type:"post",
@@ -50,5 +45,6 @@ require(["config"],function(){
                 
             })
         });
+      
     })
 })

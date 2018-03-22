@@ -5,11 +5,12 @@
 	float: left;
 	margin-top: 30px;
 	background: #0094FF;
-	color: white;
+	
 }
 .tab-menu h4{
 	height: 40px;
 	line-height: 40px;
+	
 	border-bottom: white solid 1px;
 }
 .tab-menu ul{
@@ -17,11 +18,11 @@
 	margin-right: 30px;
 }
 .tab-menu ul li{
-	border-bottom: white solid 1px;
-	background: #0094FF;
+	border-bottom: black solid 1px;
+	
 	height: 30px;
 	text-align: center;line-height: 30px;
-	color: white;
+	
 	margin-bottom: 20px;
 }
 .tab-box{
@@ -29,7 +30,7 @@
 	margin-top: 30px;
 }
 .tab-box div{
-	
+	height: 300px;
 	display:none;
 	}
 /* 让第一个框显示出来 */
@@ -37,8 +38,17 @@
 	display:block;
 	} 
 /* 改变选项卡选中时候的样式 */
-.change{background:red;} 
+.change{background:white;} 
 .tab-box div li{
+	padding-left: 30px;
+	background: url(../img/list2.gif) no-repeat left center;
 	line-height: 40px;
 	border-bottom: black dashed 1px;
+}
+.tab-box div li:hover{
+	padding-left: 30px;
+	background:#0E90D2 url(../img/list2.gif) no-repeat left center;
+	cursor: pointer;
+
+	color: white;
 }
