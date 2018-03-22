@@ -1,5 +1,6 @@
 body{
 	background: #6fb3e0;
+	overflow: auto;
 }
 .box{
 	width: 360px;

@@ -21,7 +21,6 @@ router.get('/', function(req, res, next) {
     })
 });
 
-<<<<<<< HEAD
 router.post('/register', function(req, res, next) {
     res.append("Access-Control-Allow-Origin","*");
        console.log(req.body);
@@ -44,8 +43,4 @@ router.post('/register', function(req, res, next) {
     })
 });
 
-
-
-=======
->>>>>>> bf7fb8d8c0d17711ad709a79090a3e105b5530c7
 module.exports = router;
