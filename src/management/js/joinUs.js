@@ -56,10 +56,15 @@
                     }).then(function(res){
                         $("#tab").html("")
                         for(var i=0; i<res.length; i++){
-                            var str='<tr data-info="'+res[i].j_id+'"><td><input type="checkbox"/></td><td>'+res[i].j_position+'</td><td>'+res[i].j_class+'</td><td>'+res[i].j_address+'</td><td>'+res[i].j_num+'</td><td>'+res[i].j_time+'</td><td><a href="#">删除</a></td></tr>';
+                            if(rank<=2){
+                                var str='<tr data-info="'+res[i].j_id+'"><td><input type="checkbox"/></td><td>'+res[i].j_position+'</td><td>'+res[i].j_class+'</td><td>'+res[i].j_address+'</td><td>'+res[i].j_num+'</td><td>'+res[i].j_time+'</td><td><a href="#" class="active">删除</a></td></tr>';
+                            }else {
+                                var str='<tr data-info="'+res[i].j_id+'"><td><input type="checkbox"/></td><td>'+res[i].j_position+'</td><td>'+res[i].j_class+'</td><td>'+res[i].j_address+'</td><td>'+res[i].j_num+'</td><td>'+res[i].j_time+'</td><td><a href="#" class="disabled">删除</a></td></tr>';
+                            }
                             $("#tab").append(str)
                         };
-                        $("#tab tr td a").on("click",function(){
+                        console.log($("#tab tr td a.active"));
+                        $("#tab tr td a.active").on("click",function(){
                             $.ajax({
                                 url:"http://localhost:9090/job/del",
                                 type:"post",

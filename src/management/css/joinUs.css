@@ -24,6 +24,10 @@
 .joinUs table tbody tr td {
   height: 50px;
 }
+.joinUs table tbody tr td .disabled {
+  color: #ccc;
+  cursor: not-allowed;
+}
 .joinUs .pagination {
   text-align: center;
   display: block;
