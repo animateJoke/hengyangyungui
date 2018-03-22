@@ -63,24 +63,8 @@ require(["config"], function () {
             $("#user-phone").val(msg[0].u_tel);
             $("#user-QQ").val(msg[0].u_post);
             $("#user-weibo").val(msg[0].u_pwd);
-            $("#user-intro").val(msg[0].intro)
+            $("#user-intro").val(msg[0].u_intro)
 
-            // $.ajax({
-            //     type: "GET",
-            //     url: "http://localhost:9090/person/zheng",
-            //     dataType: "json"
-            // }).done(function (res) {
-            //     console.log(res);
-            //     for (var i = 0; i < res.length; i++) {
-            //
-            //         $("#user-name").val(res[1].u_name1);
-            //         $("#user-email").val(res[1].u_email);
-            //         $("#user-phone").val(res[1].u_tel);
-            //         $("#user-QQ").val(res[1].u_post);
-            //         $("#user-weibo").val(res[1].u_name);
-            //         $("#user-intro").val(res[1].intro)
-            //     }
-            // })
         })
     })
 })
