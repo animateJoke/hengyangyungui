@@ -14,6 +14,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <link rel="stylesheet" type="text/css" href="css/jingying.css"/>
 <link rel="stylesheet" type="text/css" href="css/zhaopin.css"/>
 <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style>
+        #l-map{height:300px;width:100%;}
+        #r-result,#r-result table{width:100%;font-size:12px;}
+    </style>
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=		QcGkd5KuDUfSiZXxtZLERu8OInXMPSsf"></script>
 <script src="js/responsiveslides.min.js"></script>
 <script>
     $(function () {
@@ -58,8 +65,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					<h1><a href="index.html">衡阳云轨公司</a></h1>
 				</div>
 				<div class="buttons">
-				   	<a href="joinus.html" class="button">注册</a>
-		            <a href="login.html" class="button1">登录</a>
+				   	
+		            <a href="management/login.html" class="button1">登录</a>
 				</div>
 				<div class="clearfix"></div>
 			</div>
@@ -78,7 +85,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <!-- Collect the nav links, forms, and other content for toggling -->
 						<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 						  <ul class="nav navbar-nav cl-effect-16">
-							<li class="active"><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
+							<li><a href="index.html">首页 <span class="sr-only">(current)</span></a></li>
 							<li><a href="about.html">企业管理</a></li>
 							 <li class="dropdown">
 							  <a href="services.html" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">新闻中心<span class="caret"></span></a>
@@ -92,7 +99,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<li><a href="codes.html">建设动态</a></li>
 								<li><a href="jingying.html">经营开发</a></li>
 								<li><a href="contact.html">招标投标</a></li>
-								<li><a href="zhaopin.html">招贤纳才</a></li>
+								<li class="active"><a href="zhaopin.html">招贤纳才</a></li>
 							</ul>
 							<form class="navbar-form navbar-right" role="search">
 								<div class="form-group">
@@ -128,36 +135,77 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		        </div>
 		        <div class="tab-box col-md-9">
 		            <div>
-		            	<ul>
-		            		<li>集团公司：体检通知</li>
+		            	<ul class="tijian">
+		            		<!--<li>集团公司：体检通知</li>
 		            		<li>集团公司：关于入职办理手续通知</li>
 		            		<li>运营公司：体检通知</li>
 		            		<li>集团公司：关于入职办理手续通知</li>
-		            		<li>磁浮公司：体检通知</li>
+		            		<li>磁浮公司：体检通知</li>-->
 		            	</ul>
 		            </div>
 		            <div>
-		            	<ul>
-		            		<li>web前端</li>
-		            		<li>java</li>
-		            		<li>销售经理</li>
-		            		<li>部门经理</li>
+		            	<ul class="zhaopin">
+		            		
 		            		
 		            	</ul>
 		            </div>
 		            <div>
-		            	<ul>
-		            		<li>招聘流程</li>
-		            		<li>应聘需知</li>
-		            		<li>联系电话</li>
+		            	<ul class="lianxi">
+		            		
 		            		
 		            	</ul>
 		            </div>
 		        </div>
 			</div>
 			<!--features-->
-			
+
 		</div>
+        <!--地图-->
+        <div style="width: 1170px;margin: 20px auto; overflow:hidden">
+            <div id="l-map" style="width:600px;margin: 20px; float: left;"></div>
+            <ul class="poilist list-paddingleft-2" style="float: right;width: 500px;list-style-type: none;"><p><br/></p><ul class="poilist list-paddingleft-2" style="list-style-type: none;"><li><p><a class="n-blue" style="color: rgb(51, 133, 255); outline: 0px; cursor: pointer;">麓云路口&nbsp;-&nbsp;公交站</a><span class="float-r n-grey" style="color: rgb(102, 102, 102) !important; float: right;">171米</span></p><p>途经公交车：&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D3eee1627810cc21415c90549%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">386路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Dd2a6fe2d4aed015a5ed4fe36%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">913路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Dac2d61c772cd445eaf080f6e%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">高新园区通勤1号线</a><a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Dac2d61c772cd445eaf080f6e%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;"><br/></a></p></li></ul><p><span class="float-r n-grey" style="color: rgb(102, 102, 102) !important; float: right;">238米</span></p><p><a class="n-blue" style="white-space: normal; color: rgb(51, 133, 255); outline: 0px; cursor: pointer;">文轩路平川路口&nbsp;-&nbsp;公交站</a><br/></p><ul class="poilist list-paddingleft-2" style="list-style-type: none;"><li><p>途经公交车：&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Dd1560a100e275909110daacc%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">18路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D83eac5483ab749280f0a70a3%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">268路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D6f78c7c3b7af2058d02dd634%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">312路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3De3cdeadf11c660a2ddee8b42%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">366路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Ddd91db93911da6af1b94c60f%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">385路</a><a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D8674a441f4180d27abf0cd54%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">916路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D7b35685f6182793bf4b916d5%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">w109路</a></p><p>可点击车次查看路线详情</p></li><li><p><a class="n-blue" style="color: rgb(51, 133, 255); outline: 0px; cursor: pointer;">文轩路麓云路口&nbsp;-&nbsp;公交站</a><span class="float-r n-grey" style="color: rgb(102, 102, 102) !important; float: right;">288米</span></p><p>途经公交车：&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D6f78c7c3b7af2058d02dd634%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">312路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3De3cdeadf11c660a2ddee8b42%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">366路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Ddd91db93911da6af1b94c60f%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">385路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D8674a441f4180d27abf0cd54%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">916路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D7b35685f6182793bf4b916d5%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">w109路</a></p></li><li><p><a class="n-blue" style="color: rgb(51, 133, 255); outline: 0px; cursor: pointer;">平川路文轩路口&nbsp;-&nbsp;公交站</a><span class="float-r n-grey" style="color: rgb(102, 102, 102) !important; float: right;">325米</span></p><p>途经公交车：&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D0643ce903ccef16b48cc4aa5%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">386路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D7674573d6cd9f0e328d7aba8%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">387路</a></p></li><li><p><a class="n-blue" style="color: rgb(51, 133, 255); outline: 0px; cursor: pointer;">锦和园小区&nbsp;-&nbsp;公交站</a><span class="float-r n-grey" style="color: rgb(102, 102, 102) !important; float: right;">386米</span></p><p>途经公交车：&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Dd8119417f11622b086420e07%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">170路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D4fa72c69dd613b00e115f967%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">170路区间线</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D408e4286470025002cb17e79%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">313路</a><a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Dc0a7e65e0f3bd0acf02d839c%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">高新区园区穿梭巴士</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D88f04222eee0ca4f3b13fda4%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">高新园区通勤1号线</a></p></li><li><p><a class="n-blue" style="color: rgb(51, 133, 255); outline: 0px; cursor: pointer;">平川路麓云路口&nbsp;-&nbsp;公交站</a><span class="float-r n-grey" style="color: rgb(102, 102, 102) !important; float: right;">443米</span></p><p>途经公交车：&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D0643ce903ccef16b48cc4aa5%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">386路</a></p></li><li><p><a class="n-blue" style="color: rgb(51, 133, 255); outline: 0px; cursor: pointer;">平川路咸嘉湖西路口&nbsp;-&nbsp;公交站</a><span class="float-r n-grey" style="color: rgb(102, 102, 102) !important; float: right;">457米</span></p><p>途经公交车：&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D3eee1627810cc21415c90549%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">386路</a></p></li><li><p><a class="n-blue" style="color: rgb(51, 133, 255); outline: 0px; cursor: pointer;">咸嘉湖西路麓云路口&nbsp;-&nbsp;公交站</a><span class="float-r n-grey" style="color: rgb(102, 102, 102) !important; float: right;">471米</span></p><p>途经公交车：&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Df4ac18ec15ddc971bbbd6362%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">170路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D4fa72c69dd613b00e115f967%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">170路区间线</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D408e4286470025002cb17e79%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">313路</a><a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Dc0a7e65e0f3bd0acf02d839c%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">高新区园区穿梭巴士</a></p></li><li><p><a class="n-blue" style="color: rgb(51, 133, 255); outline: 0px; cursor: pointer;">麓云路文轩路口&nbsp;-&nbsp;公交站</a><span class="float-r n-grey" style="color: rgb(102, 102, 102) !important; float: right;">482米</span></p><p>途经公交车：&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Df4ac18ec15ddc971bbbd6362%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">170路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Db666cd14616fcfda08f5eb34%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">313路</a></p></li><li><p><a class="n-blue" style="color: rgb(51, 133, 255); outline: 0px; cursor: pointer;">锦和园小区北&nbsp;-&nbsp;公交站</a><span class="float-r n-grey" style="color: rgb(102, 102, 102) !important; float: right;">496米</span></p><p>途经公交车：&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Dd1560a100e275909110daacc%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">18路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D83eac5483ab749280f0a70a3%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">268路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D6f78c7c3b7af2058d02dd634%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">312路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3De3cdeadf11c660a2ddee8b42%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">366路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Ddd91db93911da6af1b94c60f%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">385路</a><a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D0b92e0b4f5576e5e343a7111%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">916路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3D7b35685f6182793bf4b916d5%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">w109路</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Da146283bc5d3f194c42ba182%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">穿梭巴士3号线</a>&nbsp;<a href="http://map.baidu.com/?newmap=1&t=B_NORMAL_MAP&s=bsl%26bsltp%3D0%26uid%3Dc0a7e65e0f3bd0acf02d839c%26c%3D158&from=list&ugc_ver=1" target="_blank" class="&#39;bus&#39;" style="color: rgb(51, 102, 204); text-decoration-line: none; outline: 0px; border: 1px solid rgb(212, 212, 212); margin-bottom: 5px; display: inline-block; padding: 2px;">高新区园区穿梭巴士</a></p></li></ul><p><br/></p></ul><p><br/></p>
+        </div>
+
+        <script type="text/javascript">
+            // 百度地图API功能
+            var map = new BMap.Map("l-map");
+            map.centerAndZoom(new BMap.Point(112.8945,28.215),18);
+            map.enableScrollWheelZoom(true);
+
+            map.clearOverlays();
+            var new_point = new BMap.Point(112.89149,28.21427);
+            var marker = new BMap.Marker(new_point);  // 创建标注
+            map.addOverlay(marker);              // 将标注添加到地图中
+            map.panTo(new_point);
+            //112.8945   28.215
+
+            /*var transit = new BMap.TransitRoute(map, {renderOptions: {map: map},onSearchComplete: function(result){
+                if (transit.getStatus() == BMAP_STATUS_SUCCESS){
+                    var firstPlan = result.getPlan(0);
+                    // 绘制步行线路
+                    for (var i = 0; i < firstPlan.getNumRoutes(); i++){
+                        var walk = firstPlan.getRoute(i);
+                        if (walk.getDistance(false) > 0){
+                            // 步行线路有可能为0
+                            map.addOverlay(new BMap.Polyline(walk.getPath(), {lineColor: "green"}));
+                        }
+                    }
+                    // 绘制公交线路
+                    for (i = 0; i < firstPlan.getNumLines(); i++){
+                        var line = firstPlan.getLine(i);
+                        map.addOverlay(new BMap.Polyline(line.getPath()));
+                    }
+                    // 输出方案信息
+                    var s = [];
+                    for (i = 0; i < result.getNumPlans(); i++){
+                        s.push((i + 1) + ". " + result.getPlan(i).getDescription(false));
+                    }
+                    document.getElementById("r-result").innerHTML = s.join("<br/>");
+                }
+            }
+            });*/
+
+        </script>
 	<!--detail-->
 		<div class="details-section">
 			<div class="container">
@@ -184,6 +232,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 		</div>
 	<!--detail-->
+
+
 	<!--footer-->
 		<div class="footer-section">
 						<div class="container">
@@ -210,7 +260,52 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 </body>
 </html> 
+<script type="text/javascript">
+	
+	$(function(){
+		
+	
+		
+		$.ajax({
+			type:"get",
+			url:"http://localhost:9090/mng/mng",
+			dataType: "json"
+		}).then(function(data){
+			console.log(data);
+			var arr=data;
+			for (var i=0;i<arr.length;i++) {
+				var li=$('<li data-info="' + arr[i].id + '"></li>');
+				
+				li.text(arr[i].title);
+				
+				
+				if(arr[i].ntype=="体检通知"){
+					$(".tijian").append(li);
+				}else if(arr[i].ntype=="招聘需知"){
+					$(".zhaopin").append(li);
+				}else if(arr[i].ntype=="联系电话"){
+					$(".lianxi").append(li);
+				}
+				
+			}
+			$(".tijian li").on("mousedown", function() {
+				window.location.href="xiangq.html?id="+$(this).data("info");
 
+					
+				})
+//			$(".notice li").on("mousedown", function() {
+//				window.location.href="xiangq.html?id="+$(this).data("info");
+//
+//					
+//				})
+			$(".lianxi li").on("mousedown", function() {
+				window.location.href="xiangq.html?id="+$(this).data("info");
+
+					
+				})
+		})
+	})
+</script>
 <script type="text/javascript">
 	var t;
 var index = 0;
@@ -238,6 +333,7 @@ function play() {
 $().ready(function(){
     $(".tab-menu li").mousedown(function(){
     //通过 .index()方法获取元素下标，从0开始，赋值给某个变量
+    
         var _index = $(this).index();
     //让内容框的第 _index 个显示出来，其他的被隐藏
         $(".tab-box>div").eq(_index).show().siblings().hide();

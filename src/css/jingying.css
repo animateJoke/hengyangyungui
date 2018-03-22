@@ -103,3 +103,42 @@
 	
 	color: black;
 }
+.group,.notice,.meiti{
+	margin-bottom: 50px;
+}
+.group li{
+	background: url(../img/list2.gif) no-repeat left center;
+	padding-left: 30px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+}
+.group li:hover{
+	background: #0E90D2 url(../img/list2.gif) no-repeat left center;
+	color: white;
+	cursor: pointer;
+}
+.notice li{
+	background: url(../img/list2.gif) no-repeat left center;
+	padding-left: 30px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+}
+.notice li:hover{
+	background: #0E90D2 url(../img/list2.gif) no-repeat left center;
+	color: white;
+	cursor: pointer;
+}
+.meiti li{
+	background: url(../img/list2.gif) no-repeat left center;
+	padding-left: 30px;
+	height: 35px;
+	line-height: 35px;
+	font-size: 16px;
+}
+.meiti li:hover{
+	background: #0E90D2 url(../img/list2.gif) no-repeat left center;
+	color: white;
+	cursor: pointer;
+}
