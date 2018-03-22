@@ -28,7 +28,13 @@ router.post('/getimg', upload.single('logo'), function (req, res) {
         res.send(src);
 });
 
+router.post('/getinfo',function (req, res) {
+    res.append("Access-Control-Allow-Origin", "*");
+    mysql("select * from `userinfo` where u_id=?",[req.body.id], function (results) {
+        res.json(results);
 
+    })
+});
 
 
 router.post('/getpic',function (req, res) {
