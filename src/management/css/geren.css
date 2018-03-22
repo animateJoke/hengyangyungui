@@ -20,12 +20,12 @@
   color: #999;
 }
 .admin-content .top .top-b p:nth-of-type(1) {
-  margin-right: 32px;
+  margin-right: 80px;
 }
-.admin-content .top .top-b p:nth-of-type(3),
 .admin-content .top .top-b p:nth-of-type(4) {
-  margin-left: 40px;
+  margin-left: -80px;
 }
-.admin-content .top .top-b p:nth-of-type(6) {
-  margin-right: 24px;
+.admin-content .top .top-b p:nth-of-type(6),
+.admin-content .top .top-b p:nth-of-type(5) {
+  margin-right: 48px;
 }
