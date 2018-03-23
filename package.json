@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-core": "^6.26.0",
     "body-parser": "^1.18.2",
     "bootstrap": "^3.3.7",
     "cheerio": "^1.0.0-rc.2",
@@ -22,5 +23,10 @@
     "multer": "^1.3.0",
     "mysql": "^2.15.0",
     "request": "^2.85.0"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.24.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-imagemin": "^4.1.0"
   }
 }

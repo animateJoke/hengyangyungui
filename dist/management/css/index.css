@@ -1,0 +1,15 @@
+header{position:relative;height:80px;background-color:#0094ff}
+header h1{padding-left:50px;line-height:80px;color:#fff;font-size:24px}
+header #user{position:absolute;right:50px;top:10px}
+header #user p{float:left;padding:0 15px;font-size:14px;color:#fff}
+header #user button{float:right}
+.content{height:100%;margin-top:-80px;padding-top:80px;-webkit-box-sizing:border-box;box-sizing:border-box;width:100%}
+.content .left{height:100%;width:200px;float:left}
+.content .left ul{height:100%;overflow:auto;background-color:#5bc0de}
+.content .left ul li{line-height:40px;font-size:18px;border-bottom:1px solid #eee;color:#fff}
+.content .left ul li span{display:block;cursor:pointer;padding-left:30px}
+.content .left ul li span i{display:inline-block;-webkit-transform:rotate(-90deg);transform:rotate(-90deg);font-size:14px;margin-left:15px}
+.content .left ul li div{display:none}
+.content .left ul li div p{cursor:pointer;border-top:1px solid #999;padding-left:30px;font-size:14px}
+.content .right{background:url(http://101.200.60.236:9090/true.jpg) no-repeat 200px 0;background-size:cover;height:100%;width:100%;-webkit-box-sizing:border-box;box-sizing:border-box;padding-left:200px}
+.content .right .right_bot{height:100%;margin-top:-54px;padding-top:54px;-webkit-box-sizing:border-box;box-sizing:border-box}

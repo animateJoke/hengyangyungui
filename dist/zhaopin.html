@@ -1,6 +1,11 @@
 <!DOCTYPE HTML><html><head><title>Services</title><link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"><link href="css/style.css" rel="stylesheet" type="text/css" media="all"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="keywords" content="Construction  Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design"><script type="application/x-javascript">addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }</script><link href="https://fonts.googleapis.com/css?family=Open+Sans:400,800italic,800,700italic,700,600italic,600,400italic,300italic,300" rel="stylesheet" type="text/css"><script src="js/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="css/jingying.css"><link rel="stylesheet" type="text/css" href="css/zhaopin.css"><link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta name="viewport" content="initial-scale=1,user-scalable=no"><style>#l-map{height:300px;width:100%;}
-        #r-result,#r-result table{width:100%;font-size:12px;}</style><script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=		QcGkd5KuDUfSiZXxtZLERu8OInXMPSsf"></script><script src="js/responsiveslides.min.js"></script><script>$(function () {
+        #r-result,#r-result table{width:100%;font-size:12px;}
+        .zhaopin li{
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            overflow:hidden;
+        }</style><script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=		QcGkd5KuDUfSiZXxtZLERu8OInXMPSsf"></script><script src="js/responsiveslides.min.js"></script><script>$(function () {
       $("#slider").responsiveSlides({
       	auto: true,
       	nav: true,
@@ -68,12 +73,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							$().UItoTop({ easingType: 'easeOutQuart' });
 							
 						});</script><a href="#" id="toTop" style="display: block;"><span id="toTopHover" style="opacity: 1;"></span></a></div></div></body></html><script type="text/javascript">$(function(){
-		
-	
+
+        $.ajax({
+            type:"get",
+            url:"http://101.200.60.236:9090/job/job",
+            dataType: "json",
+            data:{
+                index:0
+            }
+        }).then(function(data){
+            console.log(data);
+            var arr=data;
+            for (var i=0;i<arr.length;i++) {
+                var li=$('<li data-info="' + arr[i].j_id + '"></li>');
+
+                li.text(arr[i].j_msg);
+
+                $(".zhaopin").append(li);
+
+
+            }
+            $(".zhaopin li").on("click", function() {
+                window.location.href="xiangq1.html?id="+$(this).data("info");
+            })
+            //			$(".notice li").on("mousedown", function() {
+            //				window.location.href="xiangq.html?id="+$(this).data("info");
+            //
+            //
+            //				})
+        })
 		
 		$.ajax({
 			type:"get",
-			url:"http://101.200.60.236:9090/mng/mng",
+			url:"http://101.200.60.236:9090/mng/mng1",
 			dataType: "json"
 		}).then(function(data){
 			console.log(data);

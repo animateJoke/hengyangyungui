@@ -1,0 +1,1 @@
+require(["config"],function(){require(["jquery"],function(n){n("#register").on("click",function(){n.ajax({type:"POST",url:"http://101.200.60.236:9090/login/register",data:{u_name:n("#username").val(),u_pwd:n("#password").val(),u_post:n("#post").val(),u_rank:n("#rank").val()}}).then(function(n){console.log(n)})})})});

@@ -1,0 +1,7 @@
+.admin-content{overflow:auto;height:100%;-webkit-box-sizing:border-box;box-sizing:border-box;padding:20px;text-align:center}
+.admin-content .top .top-t{font-size:18px;color:#00a0e9}
+.admin-content .top .pic{width:200px;height:200px}
+.admin-content .top .top-b p{height:50px;line-height:50px;font-size:21px;color:#999}
+.admin-content .top .top-b p:nth-of-type(1){margin-right:80px}
+.admin-content .top .top-b p:nth-of-type(4){margin-left:-80px}
+.admin-content .top .top-b p:nth-of-type(5),.admin-content .top .top-b p:nth-of-type(6){margin-right:48px}

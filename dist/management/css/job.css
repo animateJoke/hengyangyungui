@@ -1,0 +1,12 @@
+.job{height:100%;overflow:auto}
+.job form{width:800px;margin:0 auto;padding:30px}
+.job form h2{text-align:center;padding-bottom:20px}
+.job form .job_btns{margin-top:20px}
+.job form .job_btns button{line-height:30px;padding:0 20px;margin:0 30px}
+.job form p span{font-size:16px}
+.job form p textarea{vertical-align:top;margin-top:10px;width:357px;padding-left:20px;border:1px solid #ccc;margin-left:12px}
+.job form p #job_btn2{position:fixed;right:0;top:0;z-index:999;display:none}
+.job form p input{width:357px;height:37px;padding-left:20px;border:1px solid #ccc;margin-left:12px}
+.job iframe{position:fixed;left:0;top:0;margin:auto;padding:50px 0;width:100%;height:100%;background:rgba(0,0,0,.2);display:none}
+.job iframe .btns{background-color:#fff}
+.job .error{padding-left:20px;color:red}

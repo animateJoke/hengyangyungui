@@ -1,0 +1,14 @@
+.admin-content{padding-top:20px;text-align:center;-webkit-box-sizing:border-box;box-sizing:border-box}
+.admin-content .am-text-primary{color:#0e90d2;font-size:18px}
+.admin-content .am-panel-bd{overflow:hidden}
+.admin-content .am-panel-bd .am-img-circle{width:100px;height:100px}
+.admin-content .am-panel-bd .changchuan{padding-left:20px}
+.admin-content .am-panel-bd .changchuan .am-btn{background:#0094ff;border:0;color:#fff;width:70px;height:30px}
+.admin-content .am-panel-bd .changchuan p{font-size:14px;margin-bottom:10px}
+.admin-content .am-form-horizontal div{margin:17px 0}
+.admin-content .am-form-horizontal .am-form-group1,.admin-content .am-form-horizontal .am-form-group3,.admin-content .am-form-horizontal .am-form-group5{margin-left:24px}
+.admin-content .am-form-horizontal .am-form-group6{margin-left:24px}
+.admin-content .am-form-horizontal .am-form-group4{margin-left:28px}
+.admin-content .am-form-horizontal label{font-size:14px}
+.admin-content .am-form-horizontal input{width:357px;height:37px;padding-left:20px;border:1px solid #ccc;margin-left:12px}
+.admin-content .am-form-horizontal textarea{vertical-align:top;width:357px;padding-left:20px;margin-left:12px}
