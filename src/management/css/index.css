@@ -27,7 +27,8 @@ header #user button {
   height: 100%;
   margin-top: -80px;
   padding-top: 80px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 100%;
 }
 .content .left {
@@ -53,7 +54,8 @@ header #user button {
 }
 .content .left ul li span i {
   display: inline-block;
-  transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
   font-size: 14px;
   margin-left: 15px;
 }
@@ -71,12 +73,14 @@ header #user button {
   background-size: cover;
   height: 100%;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding-left: 200px;
 }
 .content .right .right_bot {
   height: 100%;
   margin-top: -54px;
   padding-top: 54px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }

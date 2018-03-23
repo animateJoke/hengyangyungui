@@ -1,7 +1,8 @@
 .r-content {
   overflow: auto;
   height: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 30px;
 }
 .r-content .top p {

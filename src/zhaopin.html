@@ -19,6 +19,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <style>
         #l-map{height:300px;width:100%;}
         #r-result,#r-result table{width:100%;font-size:12px;}
+        .zhaopin li{
+            white-space:nowrap;
+            text-overflow:ellipsis;
+            overflow:hidden;
+        }
     </style>
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=		QcGkd5KuDUfSiZXxtZLERu8OInXMPSsf"></script>
 <script src="js/responsiveslides.min.js"></script>
@@ -263,12 +268,39 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript">
 	
 	$(function(){
-		
-	
+
+        $.ajax({
+            type:"get",
+            url:"http://101.200.60.236:9090/job/job",
+            dataType: "json",
+            data:{
+                index:0
+            }
+        }).then(function(data){
+            console.log(data);
+            var arr=data;
+            for (var i=0;i<arr.length;i++) {
+                var li=$('<li data-info="' + arr[i].j_id + '"></li>');
+
+                li.text(arr[i].j_msg);
+
+                $(".zhaopin").append(li);
+
+
+            }
+            $(".zhaopin li").on("click", function() {
+                window.location.href="xiangq1.html?id="+$(this).data("info");
+            })
+            //			$(".notice li").on("mousedown", function() {
+            //				window.location.href="xiangq.html?id="+$(this).data("info");
+            //
+            //
+            //				})
+        })
 		
 		$.ajax({
 			type:"get",
-			url:"http://101.200.60.236:9090/mng/mng",
+			url:"http://101.200.60.236:9090/mng/mng1",
 			dataType: "json"
 		}).then(function(data){
 			console.log(data);

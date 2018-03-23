@@ -1,0 +1,24 @@
+*{list-style:none}
+#lunbobox{width:100%;height:500px;position:relative}
+.lunbo{width:100%;height:500px}
+.lunbo img{width:100%;height:500px;position:absolute;top:0;left:0}
+#lunbobox ul{width:285px;position:absolute;bottom:10px;right:0;z-index:5}
+#lunbobox ul li{cursor:pointer;width:10px;height:4px;border:1px solid #ccc;float:left;list-style:none;background:#ccc;text-align:center;margin:0 5px 0 0}
+#toleft{display:none;width:30px;height:100px;font-size:40px;line-height:100px;text-align:center;color:#f4f4f4;position:absolute;top:90px;left:12px;cursor:pointer;z-index:99;opacity:.4}
+#toright{display:none;width:30px;height:100px;font-size:40px;line-height:100px;text-align:center;color:#f4f4f4;position:absolute;top:90px;right:0;cursor:pointer;z-index:99;opacity:.4}
+.container h3{margin-top:20px}
+.project-grd p{padding-top:10px}
+.two img{width:538px;height:184px}
+.two li{line-height:30px}
+.choose-grid ul{margin-top:20px;margin-bottom:50px}
+.choose-grid li{line-height:30px}
+.choose-grid li a{width:100%;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.table h3{font-size:1.3em}
+.table h3 a{color:#000}
+.group,.meiti,.notice{margin-bottom:50px}
+.group li{background:url(../img/list2.gif) no-repeat left center;padding-left:30px;height:35px;line-height:35px;font-size:16px}
+.group li:hover{background:#0E90D2 url(../img/list2.gif) no-repeat left center;color:#fff;cursor:pointer}
+.notice li{background:url(../img/list2.gif) no-repeat left center;padding-left:30px;height:35px;line-height:35px;font-size:16px}
+.notice li:hover{background:#0E90D2 url(../img/list2.gif) no-repeat left center;color:#fff;cursor:pointer}
+.meiti li{background:url(../img/list2.gif) no-repeat left center;padding-left:30px;height:35px;line-height:35px;font-size:16px}
+.meiti li:hover{background:#0E90D2 url(../img/list2.gif) no-repeat left center;color:#fff;cursor:pointer}

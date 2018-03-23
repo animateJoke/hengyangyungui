@@ -1,7 +1,8 @@
 .admin-content {
   padding-top: 20px;
   text-align: center;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 .admin-content .am-text-primary {
   color: #0e90d2;

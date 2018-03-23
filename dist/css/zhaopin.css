@@ -1,0 +1,11 @@
+.content{margin-bottom:30px}
+.tab-menu{float:left;margin-top:30px;background:#0094FF}
+.tab-menu h4{height:40px;line-height:40px;border-bottom:#fff solid 1px}
+.tab-menu ul{margin-top:20px;margin-right:30px}
+.tab-menu ul li{border-bottom:#000 solid 1px;height:30px;text-align:center;line-height:30px;margin-bottom:20px}
+.tab-box{float:left;margin-top:30px}
+.tab-box div{height:300px;display:none}
+.tab-box div:first-Child{display:block}
+.change{background:#fff}
+.tab-box div li{padding-left:30px;background:url(../img/list2.gif) no-repeat left center;line-height:40px;border-bottom:#000 dashed 1px}
+.tab-box div li:hover{padding-left:30px;background:#0E90D2 url(../img/list2.gif) no-repeat left center;cursor:pointer;color:#fff}

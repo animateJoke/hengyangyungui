@@ -158,7 +158,8 @@ a.button1:hover {
     background-image: none;
     border: 1px solid #ccc;
     border-radius: 0px;
-    box-shadow:none;
+    -webkit-box-shadow:none;
+            box-shadow:none;
  }
 .form-control:focus {
     border-color:#ccc;
@@ -637,7 +638,8 @@ ul.women_pagenation li a:hover{
 }
 .feature-icon:hover {
     background: #222;
-	transform: rotateY(360deg);
+	-webkit-transform: rotateY(360deg);
+	        transform: rotateY(360deg);
     transition: .5s all;
     -webkit-transition: .5s all;
     -moz-transition: .5s all;
@@ -1419,6 +1421,7 @@ h2.typoh2{
 .contact-form-left a:hover{
 	color:#B2BDD4;
 	text-decoration:none;
+	-webkit-transition:.5s all;
 	transition:.5s all;
 }
 .contact input[type="text"],.contact input[type="email"],.contact textarea {
@@ -1449,6 +1452,7 @@ h2.typoh2{
     font-size: 1em;
     color: #fff;
     outline: none;
+    -webkit-transition: .5s all;
     transition: .5s all;
 	font-family: 'Open Sans', sans-serif;
 }
@@ -1766,7 +1770,8 @@ padding-right:15px;
 padding-left:15px;
 overflow-x:visible;
 border-top:none;
-box-shadow:none;
+-webkit-box-shadow:none;
+        box-shadow:none;
 }
 .navbar-default .navbar-toggle{
 border-color:#b2bdd4;

@@ -27,6 +27,14 @@ router.get('/mng', function(req, res, next){
     })
 });
 
+router.get('/mng1', function(req, res, next){
+    res.append("Access-Control-Allow-Origin", "*");
+    var str = "select * from `mng` where status=1 order by id desc ";
+    mysql(str,[], function(results){
+        res.json(results)
+    })
+});
+
 router.post('/del', function(req, res, next){
     res.append("Access-Control-Allow-Origin", "*");
     var str = "update mng set status=0 where id=?";

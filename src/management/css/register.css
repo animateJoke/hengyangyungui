@@ -37,7 +37,8 @@ select{
 	height: 30px;
 }
 .top input:last-child{
-	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
 	width: 302px;
 	height: 34px;
 	background: #428bca;

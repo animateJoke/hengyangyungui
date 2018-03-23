@@ -25,6 +25,14 @@ router.post("/del",function(req, res){
         res.json(results)
     })
 });
+
+router.post("/int",function(req, res){
+    res.append("Access-Control-Allow-Origin","*");
+    var str = "select j_html from job where j_id=?";
+    mysql(str,[req.body.id],function(results){
+        res.json(results)
+    })
+});
 router.get("/count",function(req, res){
     res.append("Access-Control-Allow-Origin","*");
     var str = "select count(*) from `job` where j_status=1";

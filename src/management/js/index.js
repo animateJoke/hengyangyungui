@@ -40,6 +40,10 @@ require(["config"],function(){
                 $(".content .right .breadcrumb").html("");
                 $(".content .right .breadcrumb").append("<li>"+$(this).text()+"</li>")
             });
+            $(".content .right .right_bot").load("lunbotu.html",function(){
+            });
+            $(".right-style").attr("href","css/lunbotu.css");
+
 
         })
     });
