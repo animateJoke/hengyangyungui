@@ -34,3 +34,12 @@ overflow:auto;
 	text-overflow: ellipsis;
 	padding:0 10px ;
 }
+.pagination{
+text-align:center;
+display:block;
+
+
+}
+.pagination li{
+display:inline-block
+}

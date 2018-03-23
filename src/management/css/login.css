@@ -1,5 +1,6 @@
 body{
-	background: #6fb3e0;
+	background: url(../../img/timg.jpg) no-repeat;
+	background-size: cover;
 	overflow: auto;
 }
 .box{

@@ -17,7 +17,7 @@ define("config",[],function(){
             "tools":["jquery"],
             "joinUs":["jquery"],
             "job":["jquery","validate"],
-            "job-news":["jquery"],
+            "job-news":["jquery"]
         }
     })
 });

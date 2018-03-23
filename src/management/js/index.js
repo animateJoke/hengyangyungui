@@ -33,6 +33,13 @@ require(["config"],function(){
                 $(".content .right .breadcrumb").html("");
                 $(".content .right .breadcrumb").append("<li>"+$(this).parent().siblings("span").text().replace(/>/,"")+"</li><li>"+$(this).text()+"</li>")
             });
+            $("#index").on("click",function(){
+                $(".content .right .right_bot").html("").load($(this).data("info")+".html?id="+Math.random(),function(){
+                });
+                $(".right-style").attr("href","css/"+$(this).data("info")+".css");
+                $(".content .right .breadcrumb").html("");
+                $(".content .right .breadcrumb").append("<li>"+$(this).text()+"</li>")
+            });
 
         })
     });
