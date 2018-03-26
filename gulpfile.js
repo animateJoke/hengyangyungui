@@ -69,7 +69,7 @@ gulp.task('jsmin2', function(){
 });
 
 gulp.task('Imagemin1', function () {
-    gulp.src(['src/img/*.{png,jpg,gif,ico}','src/img/images/*.{png,jpg,gif,ico}'])
+    gulp.src(['src/img/*.{png,jpg,gif,ico,JPG}','src/img/images/*.{png,jpg,gif,ico}'])
         .pipe(imagemin({
             optimizationLevel: 5, //类型：Number  默认：3  取值范围：0-7（优化等级）
             progressive: true, //类型：Boolean 默认：false 无损压缩jpg图片
