@@ -18,6 +18,8 @@ router.get('/job', function(req, res, next) {
         res.json(results)
     })
 });
+
+
 router.post("/del",function(req, res){
     res.append("Access-Control-Allow-Origin","*");
     var str = "update job set j_status=0 where j_id=?";

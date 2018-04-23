@@ -247,9 +247,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 					$(".group").append(li);
 				}else if(arr[i].ntype=="通知公告"){
 					$(".notice").append(li);
-				}else{
-					$(".meiti").append(li);
-				}
+				}else if(arr[i].ntype=="媒体聚焦"){
+                    $(".meiti").append(li);
+                }
 				
 			}
 			$(".group li").on("mousedown", function() {
